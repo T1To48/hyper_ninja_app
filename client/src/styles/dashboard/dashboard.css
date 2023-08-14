@@ -1,0 +1,153 @@
+.dashboard-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+    margin-right: 70px;
+    align-items: center;
+    background-color: var(--body-color);
+  }
+  
+  main.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    height: 80vh;
+    background-color:var(--body-color);
+    /* backdrop-filter: blur(7px); */
+    /* box-shadow: 0 8px 14px #0005; */
+    border-radius: 14px;
+  }
+  
+  .dashboard-header {
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 12%;
+    background: none;
+    padding: 20px 26px;
+    margin:5px 10px;
+    color: var(--text-color);
+  }
+  
+  .dashboard-body {
+    width: 95%;
+    height: 89%;
+    background: rgb(168, 168, 168);
+    margin: 14px auto;
+    border-radius: 10px;
+    overflow: auto ;
+    overflow: overlay;
+  }
+  
+  .dashboard-body::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    border-top-right-radius:10px ; 
+    background: var(--primary-color); 
+  }
+  .dashboard-body::-webkit-scrollbar-thumb {
+    /* width: 8px; */
+    border-radius: 8px;
+    background: var(--primary-color);
+    
+    visibility: hidden;
+  }
+  .dashboard-body::-webkit-scrollbar-track{
+    margin-top: 6px;
+    /* margin-top: 4px; */
+    background: none;
+  }
+  .dashboard-body::-webkit-scrollbar-track-piece {
+    background: red;
+    margin-top: 50px;
+    background: var(--body-color);
+  }
+  
+  
+  .dashboard-body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  td img {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  
+  table,
+  th,
+  td {
+    border-collapse: collapse;
+    padding: 16px;
+    text-align: left;
+  }
+ 
+  thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right:0px;
+    background: var(--primary-color);
+    border-bottom: var(--body-color) 4px solid;
+    z-index: 50;
+  }
+  
+  tbody tr:nth-child(even) {
+    background: rgb(211, 210, 210);
+  }
+  
+  tbody tr:hover {
+    background: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  .status {
+    text-align: center;
+    padding: 4px 0px;
+    border-radius: 32px;
+  }
+  
+  .status.On {
+    background: #86e49d;
+    color: #006b21;
+  }
+  
+  .status.Error {
+    background: #d39393;
+    color: #b30031;
+  }
+  
+  .status.Pending {
+    background: #ebc474;
+    color: #443013;
+  }
+  
+  .status.Shipped {
+    background: #6fcaea;
+    color: #0f3057;
+  }
+  @media (max-width: 1000px) {
+    td:not(:first-of-type) {
+      min-width: 100px;
+    }
+    .home {
+      left: 120px;
+    }
+    .sidebar {
+      width: 200px;
+    }
+    main.dashboard {
+      width: 100%;
+    }
+    .sidebar.close ~ .home {
+      left: 10%;
+    }
+  }

@@ -1,0 +1,115 @@
+.url-profile-container {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    background:none;
+    align-items: center;
+    margin-left: 120px;
+}
+@keyframes blinkError1 {
+    0%, 50% ,100%{
+        color: rgba(149, 16, 16, 0.719);
+    }
+    25%,75%{
+        color: white;
+    }
+  }
+
+.url-logger{
+    width: 40vw;
+    height: 80vh;
+    background: black;
+    /* margin: 90px;  */
+    margin-left: 120px;
+    padding: 30px 20px;
+    color:white;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    font-weight: 600;
+animation: blinkError1 5s ease-in-out infinite;
+}
+.url-logger:hover{
+    animation: none;
+        color: white;
+        cursor: help;
+      }
+
+.url-profile-details .url-detail-status-row {
+     display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    background:var(--sidebar-color) ;
+    width: 30vw;
+    padding: 25px 20px;
+
+}
+
+.url-profile-details .url-detail-row {
+    
+    display: flex;
+    justify-content: space-between;
+    /* background:white ; */
+    padding: 30px 20px;
+    border-radius: 15px;
+    margin:90px 0;
+    background: var(--sidebar-color);
+    width: 30vw;
+    transition: var(--tran-05);
+
+}
+.url-profile-details .editable:hover{
+    transform: translateY(-25px);
+    transition: var(--tran-05);
+    box-shadow: 5px 0px 5px var(--primary-color), -5px 0px 5px var(--primary-color), 0px 10px 10px var(--primary-color);
+}
+.url-profile-details .editable:hover{
+    cursor: pointer;
+
+}
+
+.url-profile-details .not-editable:hover{
+    cursor: not-allowed;
+
+}
+.url-profile-details .editable:active{
+    background-color: var(--primary-color);
+    transition: var(--tran-10);
+}
+.url-profile-details span{
+    font-size: 20px;
+    color: var(--text-color);
+    overflow: hidden;
+}
+.url-profile-details span input{
+    outline: none;
+    border:none;
+    color: var(--text-color);
+    background: var(--sidebar-color);
+    font-weight: 450;
+    font-size: 15px;
+    width: auto;
+}
+
+.delete-url-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete-url-btn{
+    font-size: 30px;
+    font-weight: 450;
+    letter-spacing: 10px;
+    width: fit-content;
+    height: 50px;
+    background: none;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--tran-03);
+    color: rgba(119, 18, 18, 0.719);
+}
+.delete-url-btn:hover{
+    background-color:rgba(119, 18, 18, 0.719) ;
+    color:white;
+    transition: var(--tran-03);
+}

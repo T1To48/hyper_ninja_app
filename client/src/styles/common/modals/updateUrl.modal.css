@@ -1,0 +1,128 @@
+.update-url-modal-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: var(--sidebar-color);
+    padding-top: 10px;
+    padding-bottom:0px;
+    border-radius: 15px;
+    max-width: 280px;
+    width: 100%;
+    height: fit-content;
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+    pointer-events:none ;
+    transition: var(--tran-05);
+    z-index: 1000;
+    overflow: hidden;
+
+}
+
+.updateUrlModal-open{
+    opacity: 1;
+    pointer-events:all;
+    transform: translate(-50%, -50%) scale(1.4);
+transition: var(--tran-05);
+}
+.update-url-modal-container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 20px 0;
+    border-bottom: 1px solid #ebedf9;
+    padding:0 25px;
+    padding-bottom:4px;
+}
+
+.update-url-modal-container header span {
+    font-size: 18px;
+    font-weight: 600;
+}
+.update-url-modal-container header .close {
+    height: 30px;
+    width: 30px;
+    background: var(--primary-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+.update-url-modal-container header .close:hover {
+    background: var(--primary-color);
+    color: var(--sidebar-color);
+}
+
+/* .update-url-modal-container .body .input-row {
+    margin: 0 10px;
+    margin-bottom: 10px;
+} */
+.update-url-modal-container .body{
+    display: flex;
+    justify-content: center;
+}
+.update-url-modal-container .body input {
+    height: 100%;
+    width: 90%;
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    background: var(--primary-color-light);
+    transition: var(--tran-05);
+    padding: 4px 10px;
+}
+.update-url-modal-container .footer p{
+    margin-top: 10px;
+    padding-left: 10px;
+    height: 15px;
+    color:red ;
+    font-size: 10px;
+}
+.update-url-modal-container .footer-btns-container{    
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    max-width: 280px;
+    width: 100%;
+}
+.update-url-modal-container .footer-btns-container button{
+    width: 50%;
+    height: 30px;
+    padding: 0px 20px;
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: var(--tran-03);
+    cursor: pointer;
+}
+.update-url-modal-container .footer-btns-container button:hover{
+    
+    transition: var(--tran-03);
+    color: #fff;
+}
+
+.update-url-modal-container .footer-btns-container .save-update-btn{
+    color:var(--primary-color);
+}
+.update-url-modal-container .footer-btns-container .save-update-btn:hover{
+    background-color:var(--primary-color);
+    
+}
+.update-url-modal-container .footer-btns-container .cancel-update-btn{
+    color:rgba(119, 18, 18, 0.719);
+}
+.update-url-modal-container .footer-btns-container .cancel-update-btn:hover{
+    background:rgba(119, 18, 18, 0.719);
+}
+.update-url-modal-container .footer-btns-container .cancel-update-btn:active,
+.update-url-modal-container .footer-btns-container .save-update-btn:active{
+    background:var(--sidebar-color);
+    transition: var(--tran-10);
+}

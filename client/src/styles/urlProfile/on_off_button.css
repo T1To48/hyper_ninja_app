@@ -1,0 +1,114 @@
+/* .urlProf-status{
+    margin: 0px ;
+    padding: 0;
+} */
+.on-off-btn {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    z-index: 1;
+  }
+  .on-off-btn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    
+  }
+  .on-off-btn label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: #a5a39d;
+    font-size: 30px;
+    /* line-height: 30px; */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    background: #b25244;
+    background: linear-gradient(#f7f2f6, #b2ac9e);
+    transition: all 0.3s ease-out;
+    z-index: -1;
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.13),
+      0 2px 4px rgba(0, 0, 0, 0.3),
+      0 4px 4px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+  }
+  
+  .on-off-btn label:before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.13);
+    filter: blur(0.5px);
+  }
+  
+  .on-off-btn label:after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
+    z-index: -2;
+    border-radius: inherit;
+    box-shadow:
+      inset 0 0.5px 0 rgba(255, 255, 255, 0.1),
+      0 0.5px 1px rgba(0, 0, 0, 0.3),
+      0 0 2px rgba(0, 0, 0, 0.15);
+  }
+  
+  .on-off-btn .icon-off:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    margin: -35% 0 0 -35%;
+    border-radius: 50%;
+    background: #d2cbc3;
+    background: linear-gradient(#cbc7bc, #d2cbc3);
+    box-shadow:
+      0 -1px 2px rgba(255, 255, 255, 0.05),
+      0 1px 2px rgba(255, 255, 255, 0.1);
+    filter: blur(0.5px);
+  }
+  
+  .on-off-btn input:checked ~ label {
+    color: #9abb82;
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.13),
+      0 2px 4px rgba(0, 0, 0, 0.35),
+      0 1px 5px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes blinkError {
+    0%, 50% ,100%{
+        color: rgba(149, 16, 16, 0.719);
+    }
+    25%,75%{
+        color: transparent;
+    }
+  }
+  .on-off-btn .error:checked ~ label {
+    animation: blinkError 3s ease-in-out infinite;
+    color: rgba(171, 15, 15, 0.719);
+    box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.13),
+    0 2px 4px rgba(0, 0, 0, 0.35),
+    0 1px 5px 2px rgba(0, 0, 0, 0.2);
+  }
+ 

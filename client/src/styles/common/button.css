@@ -1,0 +1,26 @@
+.add-new-server-btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 100%;
+  padding: 18px 0;
+  border-radius: 6px;
+  /* color:white; */
+  font-size: 18px;
+  font-weight:500 ;
+text-align: center;
+transition: var(--tran-03);
+cursor: pointer;
+}
+.add-new-server-btn-container:hover{
+  border: none;
+  background: var(--primary-color);
+  color:var(--sidebar-color);
+  transition: var(--tran-03);
+}
+
+
+  body.dark .add-new-server-btn-container{
+    color: var(--text-color);
+  }

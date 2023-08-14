@@ -1,0 +1,72 @@
+:root {
+  /* COLORS_________________ */
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+  --modal-bg:rgba(0, 0, 0, 0.5);
+
+  /* transitions_________________ */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+  --tran-06: all 0.6s ease;
+  --tran-07: all 0.7s ease;
+  --tran-08: all 0.8s ease;
+  --tran-09: all 0.9s ease;
+  --tran-10: all 0.1s ease;
+  --tran-11: all 0.11s ease;
+  --tran-12: all 0.12s ease;
+  --tran-13: all 0.13s ease;
+  --tran-14: all 0.14s ease;
+  --tran-15: all 0.15s ease;
+  --tran-16: all 0.16s ease;
+  --tran-17: all 0.17s ease;
+  --tran-18: all 0.18s ease;
+  --tran-19: all 0.19s ease;
+  --tran-20: all 0.2s ease;
+  --tran-21: all 0.21s ease;
+  --tran-22: all 0.22s ease;
+  --tran-23: all 0.23s ease;
+  --tran-24: all 0.24s ease;
+  --tran-25: all 0.25s ease;
+  --tran-26: all 0.26s ease;
+  --tran-27: all 0.27s ease;
+  --tran-28: all 0.28s ease;
+  --tran-29: all 0.29s ease;
+  --tran-30: all 0.3s ease;
+  --tran-31: all 0.31s ease;
+  --tran-32: all 0.32s ease;
+  --tran-33: all 0.33s ease;
+  --tran-34: all 0.34s ease;
+  --tran-35: all 0.35s ease;
+  --tran-36: all 0.36s ease;
+  --tran-37: all 0.37s ease;
+  --tran-38: all 0.38s ease;
+  --tran-39: all 0.39s ease;
+  --tran-40: all 0.4s ease;
+  --tran-41: all 0.41s ease;
+  --tran-42: all 0.42s ease;
+  --tran-43: all 0.43s ease;
+  --tran-44: all 0.44s ease;
+  --tran-45: all 0.45s ease;
+  --tran-46: all 0.46s ease;
+  --tran-47: all 0.47s ease;
+  --tran-48: all 0.48s ease;
+  --tran-49: all 0.49s ease;
+  --tran-50: all 0.5s ease;
+
+  --tran-s-y1: all 1s ease;
+}
+
+body.dark {
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+}

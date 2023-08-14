@@ -1,0 +1,115 @@
+/* ***********************************
+ *
+ *    Ire's CSS Reset & Base
+ *
+ * *********************************** */
+
+/* Reset margin, padding, border
+ * *********************************** */
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ /* Typography
+  * *********************************** */
+ 
+ html {
+     font-size: 62.5%;
+ }
+ 
+ body {
+     font-size: 1.6rem;
+     line-height: 1.4;
+ }
+ 
+ * {
+     font-family: inherit;
+     font-size: inherit;
+     line-height: inherit;
+ }
+ 
+ a,
+ a:visited {
+     color: inherit;
+ }
+ 
+ /* Layout
+  * *********************************** */
+ 
+ article,
+ aside,
+ footer,
+ header,
+ nav,
+ section,
+ main {
+     display: block;
+ }
+ 
+ *:before,
+ *:after {
+     box-sizing: inherit;
+ }
+ 
+ /* Elements
+  * *********************************** */
+ 
+ table {
+     border-collapse: collapse;
+     border-spacing: 0;
+ }
+ 
+ ol,
+ ul {
+     list-style: none;
+ }
+ 
+ img,
+ video {
+     max-width: 100%;
+ }
+ 
+ img {
+     border-style: none;
+ }
+ 
+ blockquote,
+ q {
+     quotes: none;
+ }
+ 
+ blockquote:after,
+ blockquote:before,
+ q:after,
+ q:before {
+     content: "";
+     content: none;
+ }
+ 
+ /* Attributes & states
+  * *********************************** */
+ 
+ [hidden] {
+     display: none !important;
+ }
+ 
+ [disabled] {
+     cursor: not-allowed;
+ }
+ 
+ :focus:not(:focus-visible) {
+     outline: none;
+ }
+ 
+ /* Utility classes
+  * *********************************** */
+ 
+ .sr-only {
+     position: absolute;
+     clip: rect(1px, 1px, 1px, 1px);
+     left: -9999px;
+     top: -9999px;
+ }

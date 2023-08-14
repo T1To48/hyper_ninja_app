@@ -1,0 +1,154 @@
+.flex{
+    display: flex;
+   align-items: center;
+}
+.register-container{
+padding: 0 15px;
+min-height: 100vh;
+justify-content: center;
+}
+
+.register-component{
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    margin-left: 90px;
+}
+
+.register-component header{
+    background: #fff;
+    border-radius:8px ;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4),
+0 8px 16px rgba(0, 0, 0, 0.3);
+max-width:400px ;
+width: 100%;
+padding: 50px;
+padding-top: 0;
+}
+.register-component header .error{
+    margin-top: 20px;
+    height: 40px;
+    color: red;
+    font-size: 15px;
+}
+.register-component header form{
+display: flex;
+flex-direction: column;
+}
+.register-component header form  input{
+    height: 55px;
+    border:1px solid var(--toggle-color);
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    padding: 0 14px;
+    align-self: flex-start;
+}
+.register-component header  form  .nameInput{
+    width: 70%;
+}
+.register-component header form  .emailInput{
+    width: 80%;
+}
+.register-component header form  .passwordInput{
+    width: 90%;
+}
+.register-component header form  input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+.register-component header form  input::placeholder{
+    /* color:#777; */
+    color:#777;
+    font-size: 17px;
+    /* text-align: center; */
+    letter-spacing: 6px;
+}
+.register-btn-container{
+    /* align-self: center; */
+    /* width: 100%; */
+    height: 60px;
+
+}
+.register-container header form button{
+    width: 100%;
+    height: 60px;
+    /* align-self: center; */
+/* text-align: center; */
+border: none;
+outline: none;
+cursor: pointer;
+background: var(--primary-color);
+padding:15px 0;
+border-radius: 6px;
+color:#fff;
+font-size: 20px;
+font-weight: 600;
+letter-spacing: 8px;
+transition: var(--tran-04);
+
+}
+
+.register-component header form button:hover{
+color:var(--primary-color);
+background:none;
+border:0.1px solid var(--primary-color);
+letter-spacing: 12px;
+
+transition: var(--tran-04);
+}
+.register-component header div{
+    font-size: 18px;
+}.register-component header div span{
+    text-decoration: none;
+font-size: 20px;
+font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+
+
+}
+.register-component header div span:hover{
+    text-decoration: underline;
+}
+.register-component footer{
+    display: flex;
+flex-direction: column;
+    padding-left: 100px;
+    margin-bottom: 20px;
+}
+.register-component footer h1{
+    color: var(--primary-color);
+    font-size: 64px;
+    /* margin-bottom: 10px; */
+}
+.register-component footer p{
+    font-size: 26px;
+
+}
+
+.register-component footer .footer-btns{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    /* background: none; */
+}
+.register-component footer .footer-btns button{
+    height: 60px;
+    width: 220px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:  var(--tran-04);
+    background: none;
+
+}
+.register-component footer .footer-btns button:hover{
+    text-decoration: underline;
+    letter-spacing: 5px;
+
+    font-size: 25px ;
+    transition:  var(--tran-04);
+}

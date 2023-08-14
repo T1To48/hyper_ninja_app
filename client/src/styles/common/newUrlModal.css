@@ -1,0 +1,129 @@
+@import "./loaders/newUrlLoader.css";
+.new-url-modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: var(--sidebar-color);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 300px;
+    width: 100%;
+    height: 303px;
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+    pointer-events:none ;
+    transition: var(--tran-03);
+    z-index: 1000;
+}
+
+.newUrlModal-open{
+    opacity: 1;
+    pointer-events:all;
+    transform: translate(-50%, -50%) scale(1.4);
+transition: var(--tran-03);
+}
+.new-url-modal-container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ebedf9
+}
+
+.new-url-modal-container header span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.new-url-modal-container header .close {
+    height: 30px;
+    width: 30px;
+    background: var(--primary-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--tran-03);
+}
+
+.new-url-modal-container header .close:hover {
+    background: var(--primary-color);
+    color: var(--sidebar-color);
+}
+
+
+.new-url-modal-container .content .input-row {
+    margin: 0 10px;
+    margin-bottom: 10px;
+}
+
+.new-url-modal-container .content label {
+    font-size: 16px;
+    font-weight: 450;
+    color: var(--text-color);
+    margin-bottom: 5px;
+
+}
+
+.new-server-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+#new-server-btn {
+    width: 100px;
+    height: 30px;
+    margin-top:10px;
+    border: none;
+    background: none;
+    border-radius: 6px;
+    transition: var(--tran-04);
+    font-weight: 450;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+#new-server-btn:hover {
+    background-color: var(--primary-color);
+    transition: var(--tran-04);
+    color: var(--sidebar-color);
+
+}
+
+.new-url-modal-container .content input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    background: var(--primary-color-light);
+    transition: var(--tran-05);
+    padding: 4px 10px;
+}
+.modal-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--modal-bg);
+    z-index: 100;
+}
+
+
+.new-url-modal-container .content p{
+    margin-top: 4px;
+    height: 15px;
+    color:red;
+    font-size: 10px;
+}
