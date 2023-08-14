@@ -1,98 +1,77 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const genEndpoint: (id: string) => string = (id) => `url/${id}`;
+import {
+  INewUrlReq,
+  IUrlsListResponse,
+  UpdateUrlObj,
+  IQuickReviveRes,
+  IUrlResponse,
+} from "../Types/url.types";
 
-export type Status = "On" | "Off" | "Error" | "Loading" | "Pending";
-export interface UrlObj {
-  id?: string;
-  name: string;
-  url: string;
-  status: Status;
-  error?: Error | string | object
-}
-interface NewUrlReq {
-  name: string;
-  url: string
-}
-export interface UrlResObj extends UrlObj {
-  id: string;
-
-  updatedAt: string;
-
-}
-export interface UrlResponse {
-  success: boolean;
-  data: UrlResObj;
-}
-interface UrlsListResponse {
-  success: boolean;
-  data: UrlResObj[]
-}
-export interface UpdateUrlObj {
-  id: string
-  data: {
-    name?:string;
-    url?:string;
-    status?: Status;
-    error?: Error | string | object
-  }
-}
 export const apiSlice = createApi({
   reducerPath: "apiSlice",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5555/hyper-ninja/v1",
-    credentials:"include"
+    credentials: "include",
   }),
-  tagTypes: ["UrlsList","User"],
+  tagTypes: ["UrlsList", "User"],
   endpoints: (builder) => ({
-    newUrl: builder.mutation<UrlResponse, NewUrlReq>({
-      query: (urlObj: UrlObj) => ({
+    newUrl: builder.mutation<IUrlResponse, INewUrlReq>({
+      query: (urlObj) => ({
         url: genEndpoint("new"),
         method: "POST",
         body: urlObj,
       }),
-      invalidatesTags: ["UrlsList"]
+      invalidatesTags: ["UrlsList"],
     }),
-    getUrls: builder.query<UrlsListResponse, void>({
+    getUrls: builder.query<IUrlsListResponse, void>({
       query: () => genEndpoint(`urls-list`),
-      providesTags: (result, error, arg) =>
+      providesTags: (result) =>
         result?.success
-          ? [...result.data.map(({ id }) => ({ type: "UrlsList" as const, id })), "UrlsList"]
+          ? [
+              ...result.data.map(({ id }) => ({
+                type: "UrlsList" as const,
+                id,
+              })),
+              "UrlsList",
+            ]
           : ["UrlsList"],
     }),
-    getUrlById: builder.query<UrlResponse, string>({
-      query: (id: string) => genEndpoint(id),
-      providesTags:(result,error,id)=>(result?.success?[{type:"UrlsList" as const,id}]:[])
+    getUrlById: builder.query<IUrlResponse, string>({
+      query: (id) => genEndpoint(id),
+      providesTags: (result, _, id) =>
+        result?.success ? [{ type: "UrlsList" as const, id }] : [],
     }),
-    updateUrlById: builder.mutation<UrlResponse, UpdateUrlObj>({
+    updateUrlById: builder.mutation<IUrlResponse, UpdateUrlObj>({
       query: ({ id, data }) => ({
         url: genEndpoint(id),
         method: "PUT",
         body: data,
       }),
-      invalidatesTags: (result, err, arg) => [{ type: "UrlsList", id: arg.id }]
+      invalidatesTags: (_, __, arg) => [{ type: "UrlsList", id: arg.id }],
     }),
-    deleteUrlById: builder.mutation<UrlResponse, string>({
-      query: (urlId: string) => ({
+    deleteUrlById: builder.mutation<IUrlResponse, string>({
+      query: (urlId) => ({
         url: genEndpoint(urlId),
         method: "DELETE",
       }),
-      invalidatesTags: (result,err,urlId)=>[{type:"UrlsList",id:urlId}]
-
+      invalidatesTags: (_, __, urlId) => [
+        { type: "UrlsList", id: urlId },
+      ],
     }),
-    quickReviveAll: builder.mutation<UrlResponse, void>({
+    quickReviveAll: builder.mutation<IQuickReviveRes, void>({
       query: () => ({
         url: genEndpoint("/revive-all/on-login"),
         method: "POST",
       }),
-      // invalidatesTags: ["UrlsList"]
     }),
-    reviveUrlById: builder.mutation<UrlResponse, string>({
-      query: (urlId: string) => ({
+    reviveUrlById: builder.mutation<IUrlResponse, string>({
+      query: (urlId) => ({
         url: genEndpoint(`revive/${urlId}`),
         method: "POST",
       }),
-      invalidatesTags: (result,err,arg)=>[{type:"UrlsList",id:arg}]
-    })
+      invalidatesTags: (_, __, arg) => [{ type: "UrlsList", id: arg }],
+    }),
   }),
 });
 

@@ -1,6 +1,4 @@
-import { ChangeEvent } from "react";
-import { SetState } from "../index";
-import { IUserPassword } from "../../features/api.userEndpoints";
+import { IUserPassword, OnInputChange, SetState } from "../index";
 const DeleteUserBody = ({
   password,
   setPassword,
@@ -8,16 +6,16 @@ const DeleteUserBody = ({
   password: IUserPassword;
   setPassword: SetState<IUserPassword>;
 }) => {
-  
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const {value} = e.target;
+  const handleChange = (e: OnInputChange) => {
+    const { value } = e.target;
     setPassword(value);
   };
   return (
     <div className="body">
       <label htmlFor="urlName">
         Type Your<b> Password</b>,
-        <br />To Delete Your Account:
+        <br />
+        To Delete Your Account:
       </label>
       <input
         id="urlName"
@@ -29,7 +27,6 @@ const DeleteUserBody = ({
         minLength={8}
         required
       />
-      
     </div>
   );
 };

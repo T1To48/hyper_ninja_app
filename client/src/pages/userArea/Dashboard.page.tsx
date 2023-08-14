@@ -1,8 +1,7 @@
 import { DashboardComp } from "../../components";
 
 const DashboardPage = () => {
-  return<DashboardComp />
-  
+  return <DashboardComp />;
 };
 
 export default DashboardPage;

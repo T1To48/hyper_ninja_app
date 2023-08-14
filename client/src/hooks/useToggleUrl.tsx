@@ -1,6 +1,5 @@
-import React from 'react'
-import { Status, useReviveUrlByIdMutation, useUpdateUrlByIdMutation } from '../features/api.slice'
-
+import {  useReviveUrlByIdMutation, useUpdateUrlByIdMutation } from '../features/api.slice'
+import {Status} from "../Types/url.types"
 const useToggleUrl = ({status,id}:{status:Status,id:string}) => {
   const [updateUrlById]=useUpdateUrlByIdMutation();
   const [reviveUrlById]=useReviveUrlByIdMutation()

@@ -1,44 +1,46 @@
-import { UrlResObj, useGetUrlsQuery, useLazyGetUrlsQuery } from "../../features/api.slice";
+import { useGetUrlsQuery } from "../../features/api.slice";
 import DashboardRow from "./Dashboard.row";
-
+import { IUrlDoc } from "../index";
 const DashboardBody = () => {
- const {data:response}=useGetUrlsQuery()
+  const { data: response } = useGetUrlsQuery();
 
-
- 
- return (
-   <section className="dashboard-body">
-      <table >
+  return (
+    <section className="dashboard-body">
+      <table>
         <thead>
           <tr>
             <th>No.</th>
             <th>Name</th>
             <th>Status</th>
             <th>Domain</th>
-            <th>Last Revived {"url updatedAt"}</th>
-            <th>N/A {"(on/off)"}</th>
+            <th>Last Revive</th>
+            <th>Turn On/Off</th>
           </tr>
         </thead>
-        
-        <tbody >
-          {response?.success&&response.data.length>0?response.data.map((url:UrlResObj, index:number) => {
-            
-            const {id,  name, status, updatedAt, url:domain } = url;
-            return (
-              // <Link to={`server-profile/${id}`}>
-              <DashboardRow
-              key={id}
-              listNo={index+1}
-              id={id}
-              name={name}
-              status={status}
-              lastRevived={updatedAt}
-              domain={domain}
-              />
-              // </Link>
-              
-            );
-          }):<tr><td>List is Empty</td></tr>}
+
+        <tbody>
+          {response?.success && response.data.length > 0 ? (
+            response.data.map((url: IUrlDoc, index: number) => {
+              const { id, name, status, updatedAt, url: domain } = url;
+              const lastRevive = new Date(updatedAt).toLocaleString();
+
+              return (
+                <DashboardRow
+                  key={id}
+                  listNo={index + 1}
+                  id={id}
+                  name={name}
+                  status={status}
+                  lastRevived={lastRevive}
+                  domain={domain}
+                />
+              );
+            })
+          ) : (
+            <tr>
+              <td>List is Empty</td>
+            </tr>
+          )}
         </tbody>
       </table>
     </section>

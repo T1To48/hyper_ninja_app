@@ -1,15 +1,13 @@
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAppSelector } from "../../app/hooks";
+import { useDeleteUserMutation } from "../../features/api.userEndpoints";
+import { IUserPassword, OnFormSubmit } from "../index";
 import "../../styles/common/modals/changePassword.modal.css";
 
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import DeleteUserHeader from "./DeleteUserModal.header";
 import DeleteUserBody from "./DeleteUserModal.body";
 import DeleteUserFooter from "./DeleteUserModal.footer";
-import {
-  IUserPassword,
-  useDeleteUserMutation,
-} from "../../features/api.userEndpoints";
-import { useNavigate } from "react-router-dom";
 
 const DeleteUserModal = () => {
   const navigate = useNavigate();
@@ -19,7 +17,7 @@ const DeleteUserModal = () => {
   const { isOpen_deleteUserModal, opened_deleteUserModal_className } =
     useAppSelector((state) => state.styleSlice);
   const deleteUserAccount = async (
-    e: FormEvent<HTMLFormElement>
+    e: OnFormSubmit
   ): Promise<void> => {
     e.preventDefault();
     try {
@@ -35,7 +33,6 @@ const DeleteUserModal = () => {
       }
       throw new Error(JSON.stringify(response));
     } catch (err) {
-      console.log(err);
       return setError([true, "Unknown Error , Try Again Later"]);
     }
   };
@@ -50,25 +47,17 @@ const DeleteUserModal = () => {
     <div
       className={`change-password-modal-container ${opened_deleteUserModal_className}`}
     >
-      
-        
-          <DeleteUserHeader
-          // setError={setError}
-          // setPasswords={setPasswords}
-          />
-          <form onSubmit={(e) => void deleteUserAccount(e)}>
-            <DeleteUserBody password={password} setPassword={setPassword} />
+      <DeleteUserHeader
+      />
+      <form onSubmit={(e) => void deleteUserAccount(e)}>
+        <DeleteUserBody password={password} setPassword={setPassword} />
 
-            <DeleteUserFooter
-              isLoading={isLoading}
-              error={error}
-              isError={isError}
-              // setError={setError}
-              // setPasswords={setPasswords}
-            />
-          </form>
-        
-      
+        <DeleteUserFooter
+          isLoading={isLoading}
+          error={error}
+          isError={isError}
+        />
+      </form>
     </div>
   );
 };

@@ -1,20 +1,19 @@
-import { Dispatch, SetStateAction, useState } from 'react'
+import { useState } from 'react'
 import { useDeleteUrlByIdMutation } from '../../features/api.slice';
 
 import { useAppDispatch } from '../../app/hooks';
 import { closeDeleteUrlModal } from '../../features/style.Slice';
 import { useNavigate } from 'react-router-dom';
+import { SetState } from '../index';
 
 const DeleteFooter = ({
     urlId,
     ui_isError,
-    ui_error,
     setError
   }: {
     urlId:string;
     ui_isError: boolean;
-    ui_error: string;
-    setError: Dispatch<SetStateAction<[boolean, string]>>;
+    setError: SetState<boolean>;
   }) => {
     const navigate=useNavigate()
     const dispatch=useAppDispatch()
@@ -31,7 +30,6 @@ try{
 
 else throw new Error(JSON.stringify(deletedUrlObj))
 }catch(err){
-  console.log(err)
   setIsError(true)
 }
 }
@@ -54,7 +52,7 @@ else throw new Error(JSON.stringify(deletedUrlObj))
             <button
               onClick={() => {
                 dispatch(closeDeleteUrlModal());
-                setError([true, ""]);
+                setError(true);
               }}
               className="cancel-delete-btn"
             >

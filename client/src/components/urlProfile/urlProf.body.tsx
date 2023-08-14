@@ -1,6 +1,6 @@
-import { Status,UrlObj } from '../../features/api.slice'
+import { Status,ErrorType } from '../index'
 
-const UrlProfileBody = ({ status, error }: { status: Status, error: UrlObj["error"] }) => {
+const UrlProfileBody = ({ status, error }: { status: Status, error: ErrorType }) => {
   return (
     <div className="url-logger">{status === "Error" && <>{JSON.stringify(error,null, 2)}</>}</div>
   )

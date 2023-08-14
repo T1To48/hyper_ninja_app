@@ -1,6 +1,4 @@
-import { ChangeEvent } from "react";
-import { SetState } from "../index";
-import { IChangePasswordReq } from "../../features/api.userEndpoints";
+import { IChangePasswordReq, OnInputChange, SetState } from "../index";
 const ChangePassBody = ({
   passwords,
   setPasswords,
@@ -9,7 +7,7 @@ const ChangePassBody = ({
   setPasswords: SetState<IChangePasswordReq>;
 }) => {
   const { password, newPassword } = passwords;
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: OnInputChange) => {
     const { name, value } = e.target;
     setPasswords({
       ...passwords,

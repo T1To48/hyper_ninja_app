@@ -1,11 +1,10 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { useParams } from "react-router-dom";
+import { SetState } from "../index";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
-  UrlResponse,
   useUpdateUrlByIdMutation,
-  useReviveUrlByIdMutation
+  useReviveUrlByIdMutation,
 } from "../../features/api.slice";
-import { useParams } from "react-router-dom";
 import { closeUpdateUrlModal } from "../../features/style.Slice";
 
 const UpdateUrlModalFooter = ({
@@ -15,20 +14,20 @@ const UpdateUrlModalFooter = ({
 }: {
   isError: boolean;
   error: string;
-  setError: Dispatch<SetStateAction<[boolean, string]>>;
+  setError: SetState<[boolean, string]>;
 }) => {
   const dispatch = useAppDispatch();
   const { urlId: id } = useParams();
   const [updateUrlById, { isLoading }] = useUpdateUrlByIdMutation();
-  const [reviveUrlById]=useReviveUrlByIdMutation()
-  // const [[isError,error] ,setError]=useState([false,""])
+  const [reviveUrlById] = useReviveUrlByIdMutation();
   const { updateUrl_field, updateUrl_value } = useAppSelector(
     (state) => state.styleSlice
   );
 
   const updateField = async (): Promise<void> => {
     if (!id) return console.error("!!!!url id missing in params!!!!!");
-    if(updateUrl_value.length<1) return setError([true,`* ${updateUrl_field} Field is EMPTY!`])
+    if (updateUrl_value.length < 1)
+      return setError([true, `* ${updateUrl_field} Field is EMPTY!`]);
     try {
       const field = updateUrl_field.toLowerCase();
       const updatedUrlObj = await updateUrlById({
@@ -38,11 +37,10 @@ const UpdateUrlModalFooter = ({
       const { success } = updatedUrlObj;
       if (success) {
         dispatch(closeUpdateUrlModal());
-        if(field==="url") void reviveUrlById(id)
+        if (field === "url") void reviveUrlById(id);
       } else throw new Error(JSON.stringify(updatedUrlObj));
     } catch (err) {
       setError([true, `* ${updateUrl_field} already Exists`]);
-      console.log("error in updating url in modal footer", err);
     }
   };
 
@@ -51,7 +49,9 @@ const UpdateUrlModalFooter = ({
       <p> &nbsp; {isError && error}</p>
       <div className="footer-btns-container">
         {isLoading ? (
-          <div className="updateUrl-loader-container"><span className="updateUrl-loader" /></div>
+          <div className="updateUrl-loader-container">
+            <span className="updateUrl-loader" />
+          </div>
         ) : (
           <>
             <button

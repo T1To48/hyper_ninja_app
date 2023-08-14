@@ -1,10 +1,7 @@
-import React from 'react'
-import UrlProfile from "../../components/urlProfile/urlProf.component"
+import UrlProfile from "../../components/urlProfile/urlProf.component";
 
 const UrlProfilePage = () => {
-  return (
-    <UrlProfile/>
-  )
-}
+  return <UrlProfile />;
+};
 
-export default UrlProfilePage
+export default UrlProfilePage;

@@ -1,33 +1,31 @@
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   useNewUrlMutation,
   useReviveUrlByIdMutation,
 } from "../../features/api.slice";
 import { closeNewUrlModal } from "../../features/style.Slice";
-interface UrlObj {
-  name: string;
-  url: string;
-}
+import { OnFormSubmit, OnInputChange } from "../index";
+
 const ModalBody = () => {
   const dispatch = useAppDispatch();
   const { isOpen_newUrlModal } = useAppSelector((state) => state.styleSlice);
   const [newUrl, { isLoading }] = useNewUrlMutation();
   const [reviveUrlById] = useReviveUrlByIdMutation();
   const [[isError, error], setError] = useState([false, ""]);
-  const [newUrlObj, setNewUrlObj] = useState<UrlObj>({
+  const [newUrlObj, setNewUrlObj] = useState({
     name: "",
     url: "",
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: OnInputChange) => {
     const { name, value } = e.target;
     setNewUrlObj({
       ...newUrlObj,
       [name]: value,
     });
   };
-  const addNewUrl = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+  const addNewUrl = async (e: OnFormSubmit): Promise<void> => {
     e.preventDefault();
     try {
       const newUrlResponse = await newUrl(newUrlObj).unwrap();

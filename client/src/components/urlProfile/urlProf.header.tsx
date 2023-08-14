@@ -1,13 +1,17 @@
+import { IUrlDoc } from "../index";
 import { useAppDispatch } from "../../app/hooks";
-import { UrlResObj } from "../../features/api.slice";
-import { FieldNames, openDeleteUrlModal, openUpdateUrlModal } from "../../features/style.Slice";
+import {
+  FieldNames,
+  openDeleteUrlModal,
+  openUpdateUrlModal,
+} from "../../features/style.Slice";
 import useToggleUrl from "../../hooks/useToggleUrl";
 import DeleteUrlmodal from "../deleteUrlModal/DelUrlModal.component";
 import OnOffBtn from "./UrlProf.onOffBtn";
-const UrlProfileHeader = ({ urlProfileObj }: { urlProfileObj: UrlResObj }) => {
+const UrlProfileHeader = ({ urlProfileObj }: { urlProfileObj: IUrlDoc }) => {
   const dispatch = useAppDispatch();
-  const { id,name, url, status, updatedAt } = urlProfileObj;
-  const [toggleUrl]=useToggleUrl({status,id})
+  const { id, name, status, updatedAt } = urlProfileObj;
+  const [toggleUrl] = useToggleUrl({ status, id });
   const fieldsArr: FieldNames[] = ["Name", "Url", "Status"];
   const lastRevive = new Date(updatedAt).toLocaleString();
   return (
@@ -23,7 +27,7 @@ const UrlProfileHeader = ({ urlProfileObj }: { urlProfileObj: UrlResObj }) => {
                 <span>{field}:</span>
                 <OnOffBtn
                   isError={status === "Error"}
-                  onClick={()=>void toggleUrl()}
+                  onClick={() => void toggleUrl()}
                   checked={status === "Off" ? false : true}
                 />
               </div>
@@ -51,7 +55,12 @@ const UrlProfileHeader = ({ urlProfileObj }: { urlProfileObj: UrlResObj }) => {
         </div>
       </div>
       <div className="delete-url-btn-container">
-        <button className="delete-url-btn" onClick={()=>dispatch(openDeleteUrlModal())}>&nbsp;Delete</button>
+        <button
+          className="delete-url-btn"
+          onClick={() => dispatch(openDeleteUrlModal())}
+        >
+          &nbsp;Delete
+        </button>
       </div>
       <DeleteUrlmodal urlId={id} urlName={name} />
     </header>

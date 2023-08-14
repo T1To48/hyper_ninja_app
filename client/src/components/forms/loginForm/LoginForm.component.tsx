@@ -1,7 +1,9 @@
 import { useAppSelector } from "../../../app/hooks";
 import "../../../styles/forms/loginForm.modal.css";
+
 import LoginHeader from "./LoginForm.header";
 import LoginBody from "./LoginForm.body";
+
 const LoginForm = () => {
   const { opened_loginModal_className } = useAppSelector(
     (state) => state.styleSlice

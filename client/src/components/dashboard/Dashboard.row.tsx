@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Status } from "../../features/api.slice";
+import { Status } from "../index";
 import OnOffSwitch from "./Dashboard.onOffSwitch";
 import useToggleUrl from "../../hooks/useToggleUrl";
 

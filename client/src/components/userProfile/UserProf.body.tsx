@@ -1,12 +1,8 @@
-import {
-  ChangeEvent,
-  useEffect,
-} from "react";
-import { IFieldsToUpdate } from "../../features/api.userEndpoints";
-import { openChangePassModal, openDeleteUrlModal } from "../../features/style.Slice";
-import { SetState } from "../index";
+import { useEffect } from "react";
+import { IFieldsToUpdate, OnInputChange, SetState } from "../index";
+import { openChangePassModal } from "../../features/style.Slice";
 import { useAppDispatch } from "../../app/hooks";
-
+import { OnBtnClick } from "../index";
 const UserProfBody = ({
   isError,
   userData,
@@ -14,23 +10,27 @@ const UserProfBody = ({
   currentUserData,
   setIsEdited,
 }: {
-  isError:boolean;
+  isError: boolean;
   userData: IFieldsToUpdate;
   setUserData: SetState<IFieldsToUpdate>;
   setIsEdited: SetState<boolean>;
   currentUserData: { currName: string; currEmail: string };
 }) => {
-  const dispatch=useAppDispatch()
+  const dispatch = useAppDispatch();
   const { name, email } = userData;
   const { currName, currEmail } = currentUserData;
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: OnInputChange) => {
     const { name: inputName, value } = e.target;
     setUserData({
       ...userData,
       [inputName]: value,
     });
   };
+  const handleOpenModal=(e:OnBtnClick)=>{
+    e.stopPropagation()
+    dispatch(openChangePassModal());
+  }
   useEffect(() => {
     if (currName === name && currEmail === email) setIsEdited(false);
     else if (currName !== name || currEmail !== email) setIsEdited(true);
@@ -42,7 +42,8 @@ const UserProfBody = ({
           <label htmlFor="name">
             {currName !== name && (
               <i className="bx bx-edit" style={{ color: "rgb(95, 151, 11)" }} />
-            )} Name:
+            )}{" "}
+            Name:
             <br />
             <input
               onChange={handleChange}
@@ -58,7 +59,8 @@ const UserProfBody = ({
           <label htmlFor="email">
             {currEmail !== email && (
               <i className="bx bx-edit" style={{ color: "rgb(95, 151, 11)" }} />
-            )} Email:
+            )}{" "}
+            Email:
             <br />
             <input
               onChange={handleChange}
@@ -69,11 +71,18 @@ const UserProfBody = ({
               required
             />
           </label>
-          <p>{isError&&"* Another Account is Using this Email"}</p>
+          <p>{isError && "* Another Account is Using this Email"}</p>
         </div>
         <div className="detail-row">
           <div className=" change-password-btn-container">
-            <button onClick={(e)=>{e.stopPropagation();dispatch(openChangePassModal())}} className="change-password-btn"> Change Password</button>
+            <button
+            type="button"
+              onClick={handleOpenModal}
+              className="change-password-btn"
+            >
+              {" "}
+              Change Password
+            </button>
           </div>
         </div>
       </div>

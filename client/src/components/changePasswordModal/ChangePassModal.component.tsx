@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../../styles/common/modals/changePassword.modal.css";
 
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
@@ -6,9 +6,9 @@ import ChangePasswordHeader from "./ChangePassModal.header";
 import ChangePassBody from "./ChangePassModal.body";
 import ChangePassFooter from "./ChangePassModal.footer";
 import {
-  IChangePasswordReq,
   useChangePasswordMutation,
 } from "../../features/api.userEndpoints";
+import { IChangePasswordReq, OnFormSubmit } from "../index";
 import { closeChangePassModal } from "../../features/style.Slice";
 
 export const PasswordObj: IChangePasswordReq = {
@@ -24,10 +24,9 @@ const ChangePassModal = () => {
   const { isOpen_changePassModal, opened_changePassModal_className } =
     useAppSelector((state) => state.styleSlice);
   const saveNewPassword = async (
-    e: FormEvent<HTMLFormElement>
+    e:OnFormSubmit
   ): Promise<void> => {
     e.preventDefault();
-    console.log("first")
     try {
       const response = await changePassword(passwords).unwrap();
 
@@ -38,10 +37,7 @@ const ChangePassModal = () => {
         setIsChanged(true);
         setTimeout(() => {
           dispatch(closeChangePassModal());
-          // setError([false,""])
-          // setIsChanged(false);
         }, 1500);
-
         return;
       }
       if (response.data && !response.success) {
@@ -50,7 +46,6 @@ const ChangePassModal = () => {
 
       throw new Error(JSON.stringify(response));
     } catch (err) {
-      console.log(err);
       return setError([true, "Unknow Error , Try Again Later"]);
     }
   };
@@ -60,7 +55,6 @@ const ChangePassModal = () => {
       setPasswords(PasswordObj);
       setTimeout(()=>{
         setIsChanged(false);
-
       },700)
     }
   }, [isOpen_changePassModal]);
@@ -76,8 +70,6 @@ const ChangePassModal = () => {
       ) : (
         <>
           <ChangePasswordHeader
-            // setError={setError}
-            // setPasswords={setPasswords}
           />
           <form onSubmit={(e) => void saveNewPassword(e)}>
             <ChangePassBody passwords={passwords} setPasswords={setPasswords} />
@@ -86,8 +78,6 @@ const ChangePassModal = () => {
               isLoading={isLoading}
               error={error}
               isError={isError}
-              // setError={setError}
-              // setPasswords={setPasswords}
             />
           </form>
         </>
