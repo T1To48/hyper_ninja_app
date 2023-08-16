@@ -29,7 +29,9 @@ return (
         {name}
       </td>
       <td>
-        <p className={`status ${status}`}>{status}</p>
+        <p className={`status ${status}`}>
+          {status}
+          </p>
       </td>
       <td>{domain}</td>
       <td>{lastRevived}</td>

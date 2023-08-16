@@ -1,9 +1,10 @@
 //! exports FROM /components
+import RegisterForm from "./forms/registerForm/RegisterForm.component";
 import Sidebar from "./sidebar/Sidebar.component";
 import DashboardComp from "./dashboard/Dashboard.component";
 import LoginForm from "./forms/loginForm/LoginForm.component";
 import UserProfile from "./userProfile/UserProf.component";
-export { Sidebar, DashboardComp, LoginForm, UserProfile };
+export { RegisterForm,Sidebar, DashboardComp, LoginForm, UserProfile };
 
 // TYPE & Interfaces
 import { SetState, OnInputChange,OnDivClick,OnDivClickHndlr,OnBtnClick,OnBtnClickHndlr, OnFormSubmit } from "../Types/common.types";

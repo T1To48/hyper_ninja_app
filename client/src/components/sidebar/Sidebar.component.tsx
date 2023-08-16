@@ -17,7 +17,10 @@ const Sidebar = () => {
   const dispatch = useAppDispatch();
   const location = useLocation();
   const { sidebar_className } = useAppSelector((state) => state.styleSlice);
-
+  const handleClick = () => {
+    dispatch(closeChangePassModal());
+    dispatch(closeDeleteUserModal());
+  };
   useEffect(() => {
     dispatch(closeChangePassModal());
     dispatch(closeNewUrlModal());
@@ -25,9 +28,9 @@ const Sidebar = () => {
     dispatch(closeDeleteUrlModal());
     dispatch(closeDeleteUserModal());
   }, [location]);
-  
+
   return (
-    <nav className={`sidebar ${sidebar_className}`}>
+    <nav className={`sidebar ${sidebar_className}`} onClick={handleClick}>
       <SidebarHeader />
       <div className="menu-bar">
         <SideBarBody />

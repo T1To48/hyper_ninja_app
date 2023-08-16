@@ -23,13 +23,13 @@ const urlSchema: Schema<UrlDoc> = new Schema(
     name: {
       type: String,
       required: [true, "name missing!"],
-      unique: true,
+      // unique: true,
       trim: true,
     },
     url: {
       type: String,
       required: [true, "url address missing"],
-      unique: true,
+      // unique: true,
       trim: true,
     },
     status: {

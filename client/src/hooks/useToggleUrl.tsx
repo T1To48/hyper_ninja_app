@@ -1,6 +1,8 @@
 import {  useReviveUrlByIdMutation, useUpdateUrlByIdMutation } from '../features/api.slice'
 import {Status} from "../Types/url.types"
+import { useReviveUrl } from './useReviveUrl';
 const useToggleUrl = ({status,id}:{status:Status,id:string}) => {
+  const [reviveUrl]=useReviveUrl()
   const [updateUrlById]=useUpdateUrlByIdMutation();
   const [reviveUrlById]=useReviveUrlByIdMutation()
   const toggleUrl=async ():Promise<void>=>{
@@ -12,7 +14,8 @@ const useToggleUrl = ({status,id}:{status:Status,id:string}) => {
      const updatedUrl= await updateUrlById(updateObj).unwrap();
      if(updatedUrl.success &&updatedUrl.data.status!=="Off"){
        
-       void reviveUrlById(id)
+      //  void reviveUrlById(id)
+      void reviveUrl(id)
      }else if(updatedUrl.success &&updatedUrl.data.status==="Off")return;
   else{
     throw new Error(JSON.stringify(updatedUrl))

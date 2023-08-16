@@ -1,0 +1,100 @@
+.landing-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* height: 100vh; */
+    width: 99vw;
+    background-image: url("../../assets/logo/Logo.svg") ;
+    background-repeat: no-repeat, repeat;
+    background-position:  right 50px;
+    background-size:42% ;
+}
+.landing-container header{
+    display: flex;
+    margin-top: 30vh;
+    margin-bottom: 55vh;
+    margin-left: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height:fit-content;
+    padding: 20px 40px;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+}
+.landing-container header h1{
+    color: var(--body-color);
+    font-size: 55px;
+letter-spacing: 5px;
+}
+.landing-container header p{
+    font-size: 20px;
+font-weight: 500;
+
+}
+.landing-container header .btns-container{
+width:100%;
+margin-top: 30px;
+
+}
+.landing-container header .btns-container a button,
+.landing-container header .btns-container button{
+    margin: 0 10px;
+    width: 30%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: var(--body-color);
+    border: none;
+    cursor: pointer;
+    transition: var(--tran-03);
+    
+}
+
+.landing-container header .btns-container button:hover{
+    transform: translateY(-8px);
+    transition: var(--tran-03);
+    background-color: var(--primary-color);
+color:var(--body-color);
+border: solid 2px var(--body-color);
+}
+.landing-container header .btns-container button:active{
+   letter-spacing: 7px;
+   transition: var(--tran-01);
+}
+.landing-container .body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--primary-color);
+    width:100%;
+    padding-bottom: 50px;
+
+}
+.landing-container .body .paragraph{
+    width:60vw;
+    border-radius: 20px;
+    background: var(--body-color);
+    padding: 30px 20px;
+    margin: 0px 0px;
+}
+.landing-container .body .paragraph h2{
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+.landing-container .body .paragraph div{
+    font-size: 20px;
+    font-weight: 400;
+
+}
+.landing-container .body .paragraph div b{
+    color:var(--primary-color)
+}
+.gap{
+    background: var(--body-color);
+    height: 100px;
+    width: 50px;
+}
+/* header p{
+    width: 100%;
+} */

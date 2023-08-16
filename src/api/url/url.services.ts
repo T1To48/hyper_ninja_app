@@ -92,25 +92,34 @@ export const reviveById = asyncHandler(
 );
 
 export const quickReviveAll = asyncHandler(
-  async (req: Request, res: Response, next: NextFunction): Promise<any> => {
+  async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     const { userId } = req.body;
     const UrlDocs = await Url.find({ userId });
-    if (!UrlDocs)
-      return res.status(404).json({
+    if (!UrlDocs) {
+      res.status(404).json({
         success: false,
         data: "No Urls were found with user id ${userId} ",
       });
+      return;
+    }
     await Promise.all([
       UrlDocs.forEach(async (urlDoc) => {
         const { url, status, id } = urlDoc;
         if (status !== "Off") {
+          let newStatus = "Loading";
           try {
+            const serverRes = await fetch(url);
+            const toJson: ReviveUrlRes = await serverRes.json();
+
+            if (toJson?.success) {
+              newStatus = "On";
+            }
+
             await Url.findByIdAndUpdate(
               id,
-              { status: "Loading" },
+              { status: newStatus },
               { runValidators: true }
             );
-            await fetch(url);
           } catch {}
         }
       }),

@@ -113,6 +113,7 @@
     text-align: center;
     padding: 4px 0px;
     border-radius: 32px;
+    width:80px;
   }
   
   .status.On {
@@ -125,12 +126,11 @@
     color: #b30031;
   }
   
-  .status.Pending {
-    background: #ebc474;
-    color: #443013;
+  .status.Off {
+    background: black; 
+  color: #fff;
   }
-  
-  .status.Shipped {
+  .status.Loading {
     background: #6fcaea;
     color: #0f3057;
   }

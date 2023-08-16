@@ -28,9 +28,7 @@ const UserSchema: Schema = new Schema(
       type: String,
       required: [true, "Password missing !!"],
     },
-    lastLogin: {
-      type: Date,
-    },
+   
   },
   {
     versionKey: false,

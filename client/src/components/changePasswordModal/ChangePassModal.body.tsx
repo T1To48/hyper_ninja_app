@@ -16,12 +16,11 @@ const ChangePassBody = ({
   };
   return (
     <div className="body">
-      <label htmlFor="urlName">
+      <label >
         To Change Passord,
         <br /> Type The<b> Current</b> Password First:
       </label>
       <input
-        id="urlName"
         name="password"
         placeholder="Current"
         type="password"
@@ -31,7 +30,6 @@ const ChangePassBody = ({
         required
       />
       <input
-        id="urlName"
         name="newPassword"
         placeholder="New"
         type="password"
