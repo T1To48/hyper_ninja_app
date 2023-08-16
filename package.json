@@ -2,7 +2,7 @@
   "name": "hyper_ninja_server",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/server.js",
+  "main": "server.js",
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/server.js",
