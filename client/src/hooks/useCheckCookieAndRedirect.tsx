@@ -2,7 +2,7 @@ import {useEffect} from 'react'
 import { useIsAuthenticatedMutation } from '../features/api.userEndpoints'
 import { useNavigate } from 'react-router-dom';
 
-const useCheckCookieAndRedirect = () => {
+const useCheckCookieAndRedirect = (navigateTo:string) => {
     const navigate = useNavigate();
     const [isAuthenticated, { isSuccess, data }] = useIsAuthenticatedMutation();
     useEffect(() => {
@@ -10,7 +10,7 @@ const useCheckCookieAndRedirect = () => {
     }, []);
   
     useEffect(() => {
-      if (isSuccess && !data?.success) navigate("/register");
+      if (isSuccess && !data?.success) navigate(navigateTo);
     }, [isSuccess, data]);
 }
 
