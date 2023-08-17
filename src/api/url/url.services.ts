@@ -60,7 +60,7 @@ const updateUrlStatusById = async (urlId: string, toUpdate: StatusUpdate) => {
     toUpdate,
     update_settings
   );
-  if (updatedDoc?.status !== toUpdate.status)
+  if (updatedDoc.status !== toUpdate.status)
     return console.error(`failed updating the url document with id  ${urlId} `);
   return updatedDoc;
 };

@@ -42,7 +42,7 @@ export const register = asyncHandler(
 export const login = asyncHandler(
   async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     const { email, password }: IUserLogin = req.body;
-    let userDoc: IUserDoc|null = await User.findOne({ email: email });
+    let userDoc: IUserDoc = await User.findOne({ email: email });
     if (!userDoc) {
       res.status(400).json({
         success: false,
@@ -110,7 +110,7 @@ export const updateUser = asyncHandler(
   async (req: Request, res: Response, next: NextFunction) => {
     const { userId } = req.body;
     const toUpdate: IFieldsToUpdate = req.body.toUpdate;
-    const updatedUserDoc: IUserDoc|null = await User.findByIdAndUpdate(
+    const updatedUserDoc: IUserDoc = await User.findByIdAndUpdate(
       userId,
       toUpdate,
       { runValidators: true, new: true }
