@@ -15,7 +15,7 @@ import cookieParser from "cookie-parser";
 connectDB();
 export const app: Express = express();
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:["http://localhost:5173","https://hyper-ninja.onrender.com"],
     credentials:true,
 }));
 app.use(cookieParser())
