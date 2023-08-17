@@ -92,27 +92,27 @@ export const styleSlice = createSlice({
       state.isDarkmode = false;
       state.darkMode_className = "";
       state.sidebar_mode_text = "Light Mode";
-      tabLogo?.setAttribute("href", "/src/assets/logo/Logo.svg");
+      tabLogo?.setAttribute("href", "/logo/Logo.svg");
     },
     darkModeON: (state) => {
       body?.classList.add("dark");
       state.isDarkmode = true;
       state.darkMode_className = "dark";
       state.sidebar_mode_text = "Dark Mode";
-      tabLogo?.setAttribute("href", "/src/assets/logo/Logo_Darkmode.svg");
+      tabLogo?.setAttribute("href", "/logo/Logo_Darkmode.svg");
     },
     toggleMode: (state) => {
       const isDark = state.isDarkmode;
       if (isDark) {
         body?.classList.remove("dark");
-        tabLogo?.setAttribute("href", "/src/assets/logo/Logo.svg");
+        tabLogo?.setAttribute("href", "/logo/Logo.svg");
         state.isDarkmode = false;
         state.darkMode_className = "";
         state.sidebar_mode_text = "Light Mode";
       }
       if (!isDark) {
         body?.classList.add("dark");
-        tabLogo?.setAttribute("href", "/src/assets/logo/Logo_Darkmode.svg");
+        tabLogo?.setAttribute("href", "/logo/Logo_Darkmode.svg");
         state.isDarkmode = true;
         state.darkMode_className = "dark";
         state.sidebar_mode_text = "Dark Mode";

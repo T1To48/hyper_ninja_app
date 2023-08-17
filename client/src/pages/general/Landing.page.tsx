@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import "../../styles/Landing/LandingPage.css";
 import { useLightModeOn } from "../../hooks/useLightModeOn";
+import useCheckCookieAndRedirect from "../../hooks/useCheckCookieAndRedirect";
 const LandingPage = () => {
   useLightModeOn();
   const navigate = useNavigate();
+  useCheckCookieAndRedirect("/user-area")
 
   return (
     <div className="landing-container">
