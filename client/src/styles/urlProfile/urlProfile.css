@@ -27,6 +27,7 @@
     white-space: pre-wrap;
     font-weight: 600;
 animation: blinkError1 5s ease-in-out infinite;
+border-radius: 15px;
 }
 .url-logger:hover{
     animation: none;
