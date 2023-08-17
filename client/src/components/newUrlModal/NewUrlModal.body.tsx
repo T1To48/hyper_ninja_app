@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   useNewUrlMutation,
-  useReviveUrlByIdMutation,
 } from "../../features/api.slice";
 import { closeNewUrlModal } from "../../features/style.Slice";
 import { OnFormSubmit, OnInputChange } from "../index";
+import { useReviveUrl } from "../../hooks/useReviveUrl";
 
 const ModalBody = () => {
   const dispatch = useAppDispatch();
   const { isOpen_newUrlModal } = useAppSelector((state) => state.styleSlice);
   const [newUrl, { isLoading }] = useNewUrlMutation();
-  const [reviveUrlById] = useReviveUrlByIdMutation();
+  const [reviveUrl] = useReviveUrl();
   const [[isError, error], setError] = useState([false, ""]);
   const [newUrlObj, setNewUrlObj] = useState({
     name: "",
@@ -31,7 +31,7 @@ const ModalBody = () => {
       const newUrlResponse = await newUrl(newUrlObj).unwrap();
       const { success, data } = newUrlResponse;
       if (success && data.id) {
-        void reviveUrlById(data.id);
+        void reviveUrl(data.id);
         dispatch(closeNewUrlModal());
       } else throw new Error(JSON.stringify(newUrlResponse));
     } catch (err) {

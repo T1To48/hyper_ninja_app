@@ -22,7 +22,6 @@ const DeleteUserModal = () => {
     e.preventDefault();
     try {
       const response = await deleteUser(password).unwrap();
-      console.log("delete response", response);
       if (response.success && response.data) {
         navigate("/register");
 

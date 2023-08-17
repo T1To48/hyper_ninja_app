@@ -2,15 +2,15 @@ import { useEffect } from "react";
 import {
   useLazyGetUrlsQuery,
   useQuickReviveAllMutation,
-  useReviveUrlByIdMutation,
 } from "../features/api.slice";
+import { useReviveUrl } from "./useReviveUrl";
 
 const fourteenMinutes = 800_000;
 const halfMinute = 30_000;
 export const useReviver = () => {
   // const[isAuthenticated,{isSuccess:isAuthSuccess,data:authResponse}]=useIsAuthenticatedMutation()
   const [getUrls] = useLazyGetUrlsQuery();
-  const [reviveUrlById] = useReviveUrlByIdMutation();
+  const [reviveUrl] = useReviveUrl();
   const [quickReviveAll, { isSuccess: quickReviveAllSuccess }] =
     useQuickReviveAllMutation();
   useEffect(() => {
@@ -26,9 +26,8 @@ export const useReviver = () => {
           }
           data.forEach((urlObj) => {
             const { id, status } = urlObj;
-            console.log("setInterval", urlObj);
             if (status !== "Off") {
-              void reviveUrlById(id);
+              void reviveUrl(id);
             }
           });
         })
@@ -66,7 +65,7 @@ export const useReviver = () => {
               const { id, status } = urlObj;
               // console.log("timeOut",urlObj)
               if (status !== "Off") {
-                void reviveUrlById(id);
+                void reviveUrl(id);
               }
             });
           })

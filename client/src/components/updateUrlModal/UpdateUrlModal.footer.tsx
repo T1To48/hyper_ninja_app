@@ -3,9 +3,9 @@ import { SetState } from "../index";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   useUpdateUrlByIdMutation,
-  useReviveUrlByIdMutation,
 } from "../../features/api.slice";
 import { closeUpdateUrlModal } from "../../features/style.Slice";
+import { useReviveUrl } from "../../hooks/useReviveUrl";
 
 const UpdateUrlModalFooter = ({
   isError,
@@ -19,7 +19,7 @@ const UpdateUrlModalFooter = ({
   const dispatch = useAppDispatch();
   const { urlId: id } = useParams();
   const [updateUrlById, { isLoading }] = useUpdateUrlByIdMutation();
-  const [reviveUrlById] = useReviveUrlByIdMutation();
+  const [reviveUrl] = useReviveUrl();
   const { updateUrl_field, updateUrl_value } = useAppSelector(
     (state) => state.styleSlice
   );
@@ -37,7 +37,7 @@ const UpdateUrlModalFooter = ({
       const { success } = updatedUrlObj;
       if (success) {
         dispatch(closeUpdateUrlModal());
-        if (field === "url") void reviveUrlById(id);
+        if (field === "url") void reviveUrl(id);
       } else throw new Error(JSON.stringify(updatedUrlObj));
     } catch (err) {
       setError([true, `* ${updateUrl_field} already Exists`]);

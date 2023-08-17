@@ -5,12 +5,9 @@ export const useReviveUrl=()=>{
     const reviveUrl=async(urlId:string)=>{
         try{
             const reviveUrlRes=await reviveUrlById(urlId).unwrap()
-            const {status,error,url}=reviveUrlRes.data
-            console.log(reviveUrlRes.data)
+            const {status,error}=reviveUrlRes.data
             if (reviveUrlRes.success && status==="Loading" && error==="timeout"){
-                console.log(url,"timedout")
                 setTimeout(()=>{
-                    console.log("setTimeout invoked after server timeDout for:")
                     void reviveUrlById(urlId)
                 },twenty_seconds)
             }
