@@ -34,7 +34,7 @@ export const register = asyncHandler(
 
     res
       .status(200)
-      .cookie("token", token, { httpOnly: true, secure: true })
+      .cookie("token", token, { httpOnly: true })
       .json({ success: true, data: newUserDocRes });
   }
 );
@@ -71,7 +71,7 @@ export const login = asyncHandler(
     // });
     res
       .status(200)
-      .cookie("token", token, { httpOnly: true, secure: true })
+      .cookie("token", token, { httpOnly: true })
       .json({ success: true, data: userDocRes });
   }
 );
@@ -81,7 +81,7 @@ export const logout = asyncHandler(
       .status(200)
       .cookie("token", "deleted", {
         httpOnly: true,
-        secure: true,
+        
         expires: new Date(234),
       })
       .json({ success: true, data: "token deleted successfully" });
