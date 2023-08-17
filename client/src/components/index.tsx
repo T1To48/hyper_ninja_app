@@ -7,15 +7,15 @@ import UserProfile from "./userProfile/UserProf.component";
 export { RegisterForm,Sidebar, DashboardComp, LoginForm, UserProfile };
 
 // TYPE & Interfaces
-import { SetState, OnInputChange,OnDivClick,OnDivClickHndlr,OnBtnClick,OnBtnClickHndlr, OnFormSubmit } from "../Types/common.types";
+import { SetState, OnInputChange,OnDivClick,OnDivClickHndlr,OnBtnClick,OnBtnClickHndlr, OnFormSubmit } from "../types/common.types";
 import {
   IUserRegisterReq,
   IUserLoginReq,
   IChangePasswordReq,
   IUserPassword,
   IFieldsToUpdate,
-} from "../Types/user.types";
-import { ErrorType, Status,IUrlDoc } from "../Types/url.types";
+} from "../types/user.types";
+import { ErrorType, Status,IUrlDoc } from "../types/url.types";
 export type {
   SetState,
   OnInputChange,

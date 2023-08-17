@@ -6,7 +6,7 @@ import {
   UpdateUrlObj,
   IQuickReviveRes,
   IUrlResponse,
-} from "../Types/url.types";
+} from "../types/url.types";
 
 export const apiSlice = createApi({
   reducerPath: "apiSlice",

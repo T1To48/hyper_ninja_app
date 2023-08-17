@@ -1,5 +1,5 @@
 import { useUpdateUrlByIdMutation } from "../features/api.slice";
-import { Status } from "../Types/url.types";
+import { Status } from "../types/url.types";
 import { useReviveUrl } from "./useReviveUrl";
 const useToggleUrl = ({ status, id }: { status: Status; id: string }) => {
   const [reviveUrl] = useReviveUrl();

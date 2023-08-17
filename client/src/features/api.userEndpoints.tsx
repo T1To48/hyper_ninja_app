@@ -7,7 +7,7 @@ import {
   IUserAuthResponse,
   IUserPassword,
   IChangePasswordReq
-} from "../Types/user.types";
+} from "../types/user.types";
 
 export const userEndpoints = apiSlice.injectEndpoints({
   endpoints: (build) => ({
