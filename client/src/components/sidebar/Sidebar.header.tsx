@@ -11,9 +11,9 @@ const SidebarHeader = () => {
   useEffect(() => {
     if (isDarkmode && imgSrcRef.current) {
       imgSrcRef.current.src =
-        "http://localhost:5173/src/assets/logo/Logo_Darkmode.svg";
+        "/src/assets/logo/Logo_Darkmode.svg";
     } else if (imgSrcRef.current) {
-      imgSrcRef.current.src = "http://localhost:5173/src/assets/logo/Logo.svg";
+      imgSrcRef.current.src = "/src/assets/logo/Logo.svg";
     }
   }, [isDarkmode]);
   return (
