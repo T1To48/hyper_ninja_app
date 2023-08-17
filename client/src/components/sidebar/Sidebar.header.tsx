@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { toggleSidebar } from "../../features/style.Slice";
 import { useGetUserDataQuery } from "../../features/api.userEndpoints";
-
+// import "/logo/Logo.svg"
 const SidebarHeader = () => {
   const imgSrcRef = useRef<HTMLImageElement>(null);
   const dispatch = useAppDispatch();
@@ -11,9 +11,9 @@ const SidebarHeader = () => {
   useEffect(() => {
     if (isDarkmode && imgSrcRef.current) {
       imgSrcRef.current.src =
-        "/src/assets/logo/Logo_Darkmode.svg";
+        "/logo/Logo_Darkmode.svg";
     } else if (imgSrcRef.current) {
-      imgSrcRef.current.src = "/src/assets/logo/Logo.svg";
+      imgSrcRef.current.src = "/logo/Logo.svg";
     }
   }, [isDarkmode]);
   return (
