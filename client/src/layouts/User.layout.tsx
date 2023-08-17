@@ -3,7 +3,7 @@ import { Sidebar } from "../components";
 import { useReviver } from "../hooks/useReviver";
 import useCheckCookieAndRedirect from "../hooks/useCheckCookieAndRedirect";
 const UserLayout = () => {
-  useCheckCookieAndRedirect("/register");
+  useCheckCookieAndRedirect(true);
   useReviver();
   return (
     <>

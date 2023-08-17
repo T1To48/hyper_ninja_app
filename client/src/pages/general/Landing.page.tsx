@@ -5,7 +5,7 @@ import useCheckCookieAndRedirect from "../../hooks/useCheckCookieAndRedirect";
 const LandingPage = () => {
   useLightModeOn();
   const navigate = useNavigate();
-  useCheckCookieAndRedirect("/user-area")
+  useCheckCookieAndRedirect(false)
 
   return (
     <div className="landing-container">

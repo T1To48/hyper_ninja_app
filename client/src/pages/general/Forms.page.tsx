@@ -4,7 +4,7 @@ import { useLightModeOn } from "../../hooks/useLightModeOn";
 import useCheckCookieAndRedirect from "../../hooks/useCheckCookieAndRedirect";
 const Forms = () => {
  useLightModeOn()
- useCheckCookieAndRedirect("/user-area")
+ useCheckCookieAndRedirect(false)
   return (
     <div className="register-container flex">
       <RegisterForm />
