@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import Url, { Url as UrlObj, UrlDoc, UrlStatus } from "./url.model";
+import fetch from "node-fetch";
 import asyncHandler from "express-async-handler";
 
 //reviving function that:
@@ -30,11 +31,11 @@ const reviveUrl = async (url: string): Promise<StatusUpdate> => {
     );
   });
   try {
-    const response = await Promise.race<ReviveUrlRes>([
+    const response = await Promise.race([
       (await fetch(url)).json(),
       timeoutPromise,
     ]);
-    const { success, data } = response;
+    const { success, data } = response as ReviveUrlRes;
 
     if (success) return { status: "On", error: false };
     else if (!success && data === "timeout")
@@ -46,7 +47,6 @@ const reviveUrl = async (url: string): Promise<StatusUpdate> => {
         `something went wrong in: reviveUrl function, while reviving ${url}`
       );
   } catch (err) {
-    // (err);
     return {
       status: "Error",
       error: err,
@@ -109,7 +109,7 @@ export const quickReviveAll = asyncHandler(
           let newStatus = "Loading";
           try {
             const serverRes = await fetch(url);
-            const toJson: ReviveUrlRes = await serverRes.json();
+            const toJson: ReviveUrlRes = await serverRes.json() as ReviveUrlRes
 
             if (toJson?.success) {
               newStatus = "On";
