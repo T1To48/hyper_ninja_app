@@ -11,7 +11,7 @@ import {
 export const apiSlice = createApi({
   reducerPath: "apiSlice",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5555/hyper-ninja/v1",
+    baseUrl: "https://hyper-ninja-server.onrender.com/hyper-ninja/v1",
     credentials: "include",
   }),
   tagTypes: ["UrlsList", "User"],
