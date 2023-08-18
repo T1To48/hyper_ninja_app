@@ -82,40 +82,38 @@ Third party deployment servers put each deployed server to sleep (idle state),af
 </font>
 
 - <font  size=4>
-     Responsive Expandable Sidebar Offering a seamless Navigation and intuitive user experience.
-  </font>
-<br>
+       Responsive Expandable Sidebar Offering a seamless Navigation and intuitive user experience.
+    </font>
+  <br>
 
 - <font  size=4>
-   Light and Dark modes,to optimize visual comfort in diverse environments.</font>
-<br>
+     Light and Dark modes,to optimize visual comfort in diverse environments.</font>
+  <br>
 
 - <font  size=4>
-     A dynamic dashboard efficiently presents subscribed servers, featuring essential details and user-friendly on/off toggles.
-  </font>
-<br>
+       A dynamic dashboard efficiently presents subscribed servers, featuring essential details and user-friendly on/off toggles.
+    </font>
+  <br>
 
 - <font  size=4>
-    Complete Server Configuration Page: Users can exercise full control over server settings through a profile page, featuring CRUD operations and an integrated logger screen.
-  </font>
-<br>
+      Complete Server Configuration Page: Users can exercise full control over server settings through a profile page, featuring CRUD operations and an integrated logger screen.
+    </font>
+  <br>
 
 - <font  size=4>
-    User-Centric Profile Management: The user profile page facilitates personalized control with CRUD options, including secure password modification and Account Delete.
-  </font>
-<br>
+      User-Centric Profile Management: The user profile page facilitates personalized control with CRUD options, including secure password modification and Account Delete.
+    </font>
+  <br>
 
 - <font  size=4>
     The app has many Ui Ux features to make it more user-friendly and also comfy to use.
   </font> 
    <br>
 
-
 - <font  size=4>
-    Employing secure cookies, caching, and automatic data refetching, the app ensures data security and optimized performance.
-  </font>
-<br>
-
+      Employing secure cookies, caching, and automatic data refetching, the app ensures data security and optimized performance.
+    </font>
+  <br>
 
 ### Prerequisites
 
@@ -150,9 +148,19 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### 1.Server Setup (NodeJs Express example)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+first of all,
+Each server need to be registered, must have simple endpoint setup.
+In which the app use to keep the server Active,
+this endpoint is going to handle a <b>GET</b> Eequest and return this object as JSON Response:
+
+```json
+{
+  "success": true,
+  "data": "revived"
+}
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
