@@ -38,6 +38,7 @@ const reviveUrl = async (url: string): Promise<StatusUpdate> => {
     const { success, data } = await response as ReviveUrlRes;
 
     if (success && data === "revived") return { status: "On", error: false };
+    else if(success && data !=="revived" ) return {status:"Error", error:"Error in response Object ,response object should be exactly: {success:true, data:'revived'}"}
     else if (!success && data === "timeout")
       return { status: "Loading", error: "timeout" };
     else if (!success && data === "endpoint doesn't exist")
