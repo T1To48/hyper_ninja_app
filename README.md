@@ -201,7 +201,7 @@ app.get("*", (_, res) =>
 );
 ```
 - The <b>SetTimeout</b> provides a better user experience and also gurantees that the server is Activated and functioned for a fixed amount of time , which increase the Hyper Ninja server's Revivng-Mechanism efficiency.
-- The <b>```json "*" ```  ENDPOINT</b> gives Error handling advantage , where  the Hyper Ninja server’s Logger 
+- The <b>```"*"```  ENDPOINT</b> gives Error handling advantage , where  the Hyper Ninja server’s Logger 
 will warn you if the Error is cause by incorrect endpoint.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
