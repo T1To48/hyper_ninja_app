@@ -148,9 +148,16 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ## Usage
 
+Usage is very Simple but First small setup for each server is required.
+
+This Usage Guide is for NodeJs Express server,
+But every server (no matter which programmming language) works on Hyper Ninja,
+<b> as long as it has a Get Request with the below JSON OBJECT as Response with Endpoint matches
+  the registered endpoint in hyper ninja account.</b>
+
+
 ### 1.Server Setup (NodeJs Express example)
 
-First of all,
 Each server need to be registered, must have simple <b>endpoint setup</b>.
 In which the app use to keep the server Active,
 this endpoint is going to handle a <b>GET</b> Request and return this object as JSON Response:
@@ -162,6 +169,21 @@ this endpoint is going to handle a <b>GET</b> Request and return this object as 
 }
 ```
 
+### 2.Installation
+
+There is two server setup Methods Simple & Advanced.
+
+#### Simple Installation
+
+I.open the Entry point file (server.js / index.js) of the server-side code ,
+
+II.COPY and PASTE this in your entry point file:
+
+```js
+app.get("/reviver", (req, res) =>
+  res.status(200).json({ success: true, data: "revived" })
+);
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
