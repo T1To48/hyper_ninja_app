@@ -115,7 +115,11 @@ font-weight: 600;
     display: flex;
 flex-direction: column;
     padding-left: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+.register-component footer img{
+    height: 25vh;
+    width:auto ;
 }
 .register-component footer h1{
     color: var(--primary-color);

@@ -3,6 +3,7 @@ import { OnBtnClickHndlr } from "../.."
 const RegisterFormFooter = ({openModal}:{openModal:OnBtnClickHndlr}) => {
   return (
     <footer>
+      <img src="/logo/Logo.svg"/>
     <h1>HYPER NINJA </h1>
     <p>Anti Server-Sleeper, &nbsp;Stay UP & Running</p>
     <div className="footer-btns">
