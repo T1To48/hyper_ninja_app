@@ -1,4 +1,5 @@
 <a name="readme-top"></a>
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -21,8 +22,6 @@
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -55,33 +54,71 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
+
 <img src="readme_assets/register_page.png"  alt="Logo" >
 
-Hyper Ninja is professionally engineered Full-stack MERN app ,  that ensures your servers  deployed on Render or any other deployment  service stay awake and running effortlessly.
+<br>
+<br>
+ <font  size=4  >
 
-Third party deployment servers  put each deployed server to sleep (idle state),after 14 minutes of non-usage. This can lead to 30-40 seconds loading  time, when the server is  in idle state.
+Hyper Ninja is professionally engineered Full-stack MERN app , that ensures your servers deployed on Render or any other deployment service stay awake and running effortlessly.
 
-<b >In comparison  each server that is subscribed in hyper ninja  will be up and running with less than 0.5 second loading time.</b>
+Third party deployment servers put each deployed server to sleep (idle state),after 14 minutes of non-usage. This can lead to 30-40 seconds loading time, when the server is in idle state.
 
- <span style="color:#695cfe; font-weight:500">* Registered Servers Stay Active, As long as the user is logged in to his account and Hyper Ninja app is opened in a browser tab.</span>
+<b >In comparison each server that is subscribed in hyper ninja will be up and running with less than 0.5 second loading time.</b>
 
+<span style="color:#695cfe; font-weight:500">\* Registered Servers Stay Active, As long as the user is logged in to his account and Hyper Ninja app is opened in a browser tab.</span>
 
+</font>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## Features
 
-<b style="color:#D4AF37 ">Empowering users with an array of advanced functionalities. Explore dynamic dashboards, personalized profile management, and more. Discover how these features redefine user interaction:
-</b>
+<font  size=5  style="color:#D4AF37">Empowering users with an array of advanced functionalities. Explore dynamic dashboards, personalized profile management, and more. Discover how these features redefine user interaction:
+</font>
+
+- <font  size=4>
+     Responsive Expandable Sidebar Offering a seamless Navigation and intuitive user experience.
+  </font>
+<br>
+
+- <font  size=4>
+   Light and Dark modes,to optimize visual comfort in diverse environments.</font>
+<br>
+
+- <font  size=4>
+     A dynamic dashboard efficiently presents subscribed servers, featuring essential details and user-friendly on/off toggles.
+  </font>
+<br>
+
+- <font  size=4>
+    Complete Server Configuration Page: Users can exercise full control over server settings through a profile page, featuring CRUD operations and an integrated logger screen.
+  </font>
+<br>
+
+- <font  size=4>
+    User-Centric Profile Management: The user profile page facilitates personalized control with CRUD options, including secure password modification and Account Delete.
+  </font>
+<br>
+
+- <font  size=4>
+    The app has many Ui Ux features to make it more user-friendly and also comfy to use.
+  </font> 
+  
+   <br>
+- <font  size=4>
+    Employing secure cookies, caching, and automatic data refetching, the app ensures data security and optimized performance.
+  </font>
+
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+
+- npm
   ```sh
   npm install npm@latest -g
   ```
@@ -101,14 +138,13 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 4. Enter your API in `config.js`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   const API_KEY = "ENTER YOUR API";
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -117,24 +153,24 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ROADMAP -->
+
 ## Technologies Used
 
- ###  Frontend
-1.React Vite (Typescript)
-2.Redux Tool kit as state manager
-3. Redux Tool kit Query as data fetching and chahing tool 
-4. 100% Pure CSS
-5.React-router-dom  with createBrowserRouter()
- ### Backend
+### Frontend
 
+1.React Vite (Typescript)
+2.Redux Tool kit as state manager 3. Redux Tool kit Query as data fetching and chahing tool 4. 100% Pure CSS
+5.React-router-dom with createBrowserRouter()
+
+### Backend
 
 <!-- CONTRIBUTING -->
+
 ## Project Structure
 
 ### Client Side
+
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
@@ -148,18 +184,18 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
- ### Server Side
+### Server Side
 
 <!-- LICENSE -->
+
 ## Used Tech Review
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Personal Experience
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
@@ -168,28 +204,26 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+- [Malven's Grid Cheatsheet](https://grid.malven.co/)
+- [Img Shields](https://shields.io)
+- [GitHub Pages](https://pages.github.com)
+- [Font Awesome](https://fontawesome.com)
+- [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
 [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
@@ -218,4 +252,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[JQuery-url]: https://jquery.com
