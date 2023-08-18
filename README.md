@@ -153,13 +153,12 @@ Usage is very Simple but First small setup for each server is required.
 This Usage Guide is for NodeJs Express server,
 But every server (no matter which programmming language) works on Hyper Ninja,
 <b> as long as it has a Get Request with the below JSON OBJECT as Response with Endpoint matches
-  the registered endpoint in hyper ninja account.</b>
-
+the registered endpoint in hyper ninja account.</b>
 
 ### 1.Server Setup (NodeJs Express example)
 
 Each registered server, must have simple <b>endpoint setup</b>.
-With it's help  Hyper Ninja can keep the server Active,
+With it's help Hyper Ninja can keep the server Active,
 this endpoint is going to handle a <b>GET</b> Request and return this object as JSON Response:
 
 ```json
@@ -184,10 +183,13 @@ app.get("/reviver", (req, res) =>
   res.status(200).json({ success: true, data: "revived" })
 );
 ```
+
 #### Advanced Installation
+
 I.open the Entry point file (server.js / index.js) of the server-side code ,
 
 II.COPY and PASTE this in your entry point file:
+
 ```js
 app.get("/reviver", (req, res) =>
   setTimeout(
@@ -200,9 +202,10 @@ app.get("*", (_, res) =>
   res.status(404).json({ success: false, data: "Endpoint doesn't exist" })
 );
 ```
+
 - The <b>SetTimeout</b> provides a better user experience and also gurantees that the server is Activated and functioned for a fixed amount of time , which increase the Hyper Ninja server's Revivng-Mechanism efficiency.
-- The <b>```"*"```  ENDPOINT</b> gives Error handling advantage , where  the Hyper Ninja server’s Logger 
-will warn you if the Error is cause by incorrect endpoint.
+- The <b>`"*"` GLOBAL ENDPOINT</b> gives Error handling advantage , where the Hyper Ninja server’s Logger
+will warn you if the Error is caused by incorrect endpoint.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
