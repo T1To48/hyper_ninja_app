@@ -208,7 +208,7 @@ will warn you if the Error is caused by incorrect endpoint.
 
 ### In Hyper Ninja App
 <font size=4>A. First Register or Login To Your Account By clicking The Image Below</font>
-[![register-page-img][register-page-img]](https://hyper-ninja.onrender.com/register){:target="_blank":}
+[![register-page-img][register-page-img]](https://hyper-ninja.onrender.com/register){:target="_blank"}
 
 B.
 
