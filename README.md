@@ -158,8 +158,8 @@ But every server (no matter which programmming language) works on Hyper Ninja,
 
 ### 1.Server Setup (NodeJs Express example)
 
-Each server need to be registered, must have simple <b>endpoint setup</b>.
-In which the app use to keep the server Active,
+Each registered server, must have simple <b>endpoint setup</b>.
+With it's help  Hyper Ninja can keep the server Active,
 this endpoint is going to handle a <b>GET</b> Request and return this object as JSON Response:
 
 ```json
@@ -184,7 +184,18 @@ app.get("/reviver", (req, res) =>
   res.status(200).json({ success: true, data: "revived" })
 );
 ```
+#### Advanced Installation
+I.open the Entry point file (server.js / index.js) of the server-side code ,
 
+II.COPY and PASTE this in your entry point file:
+```js
+app.get("/reviver",(req,res)=>setTimeout(()=>res.status(200).json({success:true,data:"revived"}),5000))
+
+app.get("*",(_,res)=>res.status(404).json({success:false,data:"Endpoint doesn't exist"}))
+```
+- The <b>SetTimeout</b> provides a better user experience and also gurantees that the server is Activated and functioned for a fixed amount of time , which increase the Hyper Ninja server's Revivng-Mechanism efficiency.
+- The <b>```json "*" ```  ENDPOINT</b> gives Error handling advantage , where  the Hyper Ninja server’s Logger 
+will warn you if the Error is cause by incorrect endpoint.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
