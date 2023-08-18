@@ -150,10 +150,10 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ### 1.Server Setup (NodeJs Express example)
 
-first of all,
-Each server need to be registered, must have simple endpoint setup.
+First of all,
+Each server need to be registered, must have simple <b>endpoint setup</b>.
 In which the app use to keep the server Active,
-this endpoint is going to handle a <b>GET</b> Eequest and return this object as JSON Response:
+this endpoint is going to handle a <b>GET</b> Request and return this object as JSON Response:
 
 ```json
 {
@@ -161,6 +161,7 @@ this endpoint is going to handle a <b>GET</b> Eequest and return this object as 
   "data": "revived"
 }
 ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
