@@ -77,7 +77,7 @@
 
 ## About The Project
 
-<img src="readme_assets/dashboard-img.png"  alt="Logo" >
+<img src="readme_assets/dashboard-img.png"  alt="User-Page" >
 
 <br>
 <br>
@@ -133,7 +133,7 @@ Third party deployment servers put each deployed server to sleep (idle state),af
     </font>
   <br>
 
-## Usage
+## Usage (SETUP)
 
 Usage is very Simple but First small setup for each server is required.
 
@@ -142,7 +142,7 @@ But every server (no matter which programmming language) works on Hyper Ninja,
 <b> as long as it has a Get Request with the below JSON OBJECT as Response with Endpoint matches
 the registered endpoint in hyper ninja account.</b>
 
-### 1.Registered Server Setup (NodeJs Express example)
+### 1.SETUP Registered Server (NodeJs Express example)
 
 Each registered server, must have simple <b>endpoint setup</b>.
 With it's help Hyper Ninja can keep the server Active,
@@ -193,7 +193,7 @@ app.get("*", (_, res) =>
 will warn you if the Error is caused by incorrect endpoint.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### In Hyper Ninja App
+### 2. SETUP Hyper Ninja App
 
 <font size=4>
 <ul>
