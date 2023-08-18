@@ -59,13 +59,13 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<img src="readme_assets/register_page.png" alt="Logo" >
+<img src="readme_assets/register_page.png" style="border-radius:10px" alt="Logo" >
 
 Hyper Ninja is professionally engineered Full-stack MERN app ,  that ensures your servers  deployed on Render or any other deployment  service stay awake and running effortlessly.
 
 Third party deployment servers  put each deployed server to sleep (idle state),after 14 minutes of non-usage. This can lead to 30-40 seconds loading  time, when the server is  in idle state.
 
-<b >In comparison  each server that is subscribed in hyper ninja  will be up and running with less than 0.5 second loading time ,</b>
+<b >In comparison  each server that is subscribed in hyper ninja  will be up and running with less than 0.5 second loading time.</b>
 
  <span style="color:#695cfe; font-weight:500">* Registered Servers Stay Active, As long as the user is logged in to his account and Hyper Ninja app is opened in a browser tab.</span>
 
@@ -74,30 +74,10 @@ Third party deployment servers  put each deployed server to sleep (idle state),a
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
 ## Features
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
+<b style="color:#D4AF37">Empowering users with an array of advanced functionalities. Explore dynamic dashboards, personalized profile management, and more. Discover how these features redefine user interaction:
+</b>
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
@@ -141,19 +121,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 ## Technologies Used
+
  ###  Frontend
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+1.React Vite (Typescript)
+2.Redux Tool kit as state manager
+3. Redux Tool kit Query as data fetching and chahing tool 
+4. 100% Pure CSS
+5.React-router-dom  with createBrowserRouter()
  ### Backend
 
 
