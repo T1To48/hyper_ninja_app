@@ -198,7 +198,7 @@ will warn you if the Error is caused by incorrect endpoint.
 <font size=4>
 <ul>
 <li>
- A) First Register or Login To Your Account By clicking The Image Below
+ A) First Register or Login To Your Account
 </li>
 
 [![Registeration Page][register-page-img]](https://hyper-ninja.onrender.com/register)
@@ -242,9 +242,13 @@ Frontend & Backend are built With 100% Typescript.
 2. Mongo DB
 3. Mongoose for Object-modeling
 4. User Auth System:
+
    I.JSON-WebToken (JWT)
+
    II. Cookies With httpOnly and Server side only access
+
    III.Password Hashing with bcrypt pkg
+   
 5. cors() with credentials and strict origin
 6. ENV Configured
 7. ExpressJS AsyncHandler
