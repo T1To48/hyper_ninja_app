@@ -21,6 +21,27 @@
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
+
+![TypeScript][TypeScript]
+
+<br>
+
+![HTML5][HTML5]
+![CSS][CSS]
+![React][React]
+![Vite][Vite]
+![react-router-dom][react-router-dom]
+![Redux][Redux]
+
+![NodeJS][NodeJS]
+![ExpressJS][ExpressJS]
+![MongoDB][MongoDB]
+![Mongoose][Mongoose]
+![ENV][ENV]
+![JSON-Web-Token][JWT]
+![Cookies][Cookies]
+![Bcrypt-password-hashing][bcrypt]
+
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -54,8 +75,6 @@
   </ol>
 </details>
 
-<!-- ABOUT THE PROJECT -->
-
 ## About The Project
 
 <img src="readme_assets/register_page.png"  alt="Logo" >
@@ -63,7 +82,6 @@
 <br>
 <br>
  <font  size=4  >
-
 Hyper Ninja is professionally engineered Full-stack MERN app , that ensures your servers deployed on Render or any other deployment service stay awake and running effortlessly.
 
 Third party deployment servers put each deployed server to sleep (idle state),after 14 minutes of non-usage. This can lead to 30-40 seconds loading time, when the server is in idle state.
@@ -178,47 +196,59 @@ will warn you if the Error is caused by incorrect endpoint.
 ### In Hyper Ninja App
 
 <font size=4>
-A. First Register or Login To Your Account By clicking The Image Below
+<ul>
+<li>
+ A) First Register or Login To Your Account By clicking The Image Below
+</li>
 
 [![Registeration Page][register-page-img]](https://hyper-ninja.onrender.com/register)
 
 <br>
 
-B.Finally After successful Registeration/Login, you will be Redirected to Your Dashboard Page.
+<li>B) Finally After successful Registeration/Login, you will be Redirected to Your Dashboard Page.
 
-- Simply Click NEW on the uppper right side of the dashboard
-- then provide your server’s Name and Url
-- Then after the server is successfully registered it will appear in the dashboard ,
-- Clicking on the server’s Dashboard Row , redirects to the Server’s Profile Page,
+
+=> Simply Click NEW on the uppper right side of the dashboard
+=> then provide your server’s Name and Url
+
+=> Then after the server is successfully registered it will appear in the dashboard ,
+
+=> Clicking on the server’s Dashboard Row , redirects to the Server’s Profile Page,
   where all the Server’s settings and Error Logger are.
 
   <b> `Remember to keep Hyper Ninja open in The Browser and Logged-in for the server
  to stay Up & Running.`</b>
-
-</font>
+   </li>
+  </ul>
+  </font>
 
 ![Dashboard][dashboard-img]
 
 ## Technologies Used
 
+Frontend & Backend are built With 100% Typescript.
+
 ### Frontend
 
-1.React Vite (Typescript)
-2.Redux Tool kit as state manager 3. Redux Tool kit Query as data fetching and chahing tool 4. 100% Pure CSS
-5.React-router-dom with createBrowserRouter()
+1. React Vite (Typescript)
+2. Redux ToolKit as state manager
+3. Redux ToolKit Query as data fetching and chaching tool
+4. 100% Pure CSS
+5. React-router-dom with createBrowserRouter()
 
 ### Backend
-1.Node js Express (Typescript)
-2.Mongo DB
-3.Mongoose for Object-modeling
-4.User Auth System:
-	I.JSON-WebToken (JWT)
-	II. Cookies With httpOnly and Server side only access
-	III.Password Hashing with bcrypt pkg
-5.cors() with credentials and strict origin 
-6.ENV Configured
-7.ExpressJS AsyncHandler
-8.Error Handler 
+
+1. Node js Express (Typescript)
+2. Mongo DB
+3. Mongoose for Object-modeling
+4. User Auth System:
+   I.JSON-WebToken (JWT)
+   II. Cookies With httpOnly and Server side only access
+   III.Password Hashing with bcrypt pkg
+5. cors() with credentials and strict origin
+6. ENV Configured
+7. ExpressJS AsyncHandler
+8. Error Handler
 <!-- CONTRIBUTING -->
 
 ## Project Structure
@@ -275,37 +305,20 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com
-[register-page-img]: /readme_assets/register_page.png
-[dashboard-img]: /readme_assets/dashboard.png
+[register-page-img]: /readme_assets/register_page.gif
+[dashboard-img]: /readme_assets/dashboard.gif
+[TypeScript]: https://img.shields.io/badge/built%20with%20typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+[React]: https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
+[Vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[Redux]: https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white
+[HTML5]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
+[CSS]: https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white
+[react-router-dom]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
+[NodeJS]: https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white
+[ExpressJS]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
+[MongoDB]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
+[Mongoose]: https://img.shields.io/badge/Mongoose-880000.svg?style=for-the-badge&logo=Mongoose&logoColor=white
+[JWT]: https://img.shields.io/badge/JSON%20Web%20Tokens-000000.svg?style=for-the-badge&logo=JSON-Web-Tokens&logoColor=white
+[Cookies]: https://img.shields.io/badge/Cookies-D4AA00.svg?style=for-the-badge&logo=Cookiecutter&logoColor=white
+[bcrypt]: https://img.shields.io/badge/Bcrypt%20Password%20Hashing-003B57.svg?style=for-the-badge&logo=Spring-Security&logoColor=white
+[ENV]: https://img.shields.io/badge/.ENV-ECD53F.svg?style=for-the-badge&logo=dotenv&logoColor=black
