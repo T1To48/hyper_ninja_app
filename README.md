@@ -59,7 +59,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<img src="readme_assets/register_page.png" style="border-radius:10px" alt="Logo" >
+<img src="readme_assets/register_page.png"  alt="Logo" >
 
 Hyper Ninja is professionally engineered Full-stack MERN app ,  that ensures your servers  deployed on Render or any other deployment  service stay awake and running effortlessly.
 
@@ -76,7 +76,7 @@ Third party deployment servers  put each deployed server to sleep (idle state),a
 
 ## Features
 
-<b style="color:#D4AF37">Empowering users with an array of advanced functionalities. Explore dynamic dashboards, personalized profile management, and more. Discover how these features redefine user interaction:
+<b style="color:#D4AF37 ">Empowering users with an array of advanced functionalities. Explore dynamic dashboards, personalized profile management, and more. Discover how these features redefine user interaction:
 </b>
 ### Prerequisites
 
