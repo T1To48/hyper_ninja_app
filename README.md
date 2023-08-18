@@ -109,10 +109,12 @@ Third party deployment servers put each deployed server to sleep (idle state),af
     The app has many Ui Ux features to make it more user-friendly and also comfy to use.
   </font> 
    <br>
-   
+
 - <font  size=4>
     Employing secure cookies, caching, and automatic data refetching, the app ensures data security and optimized performance.
   </font>
+<br>
+
 
 ### Prerequisites
 
