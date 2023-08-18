@@ -155,7 +155,7 @@ But every server (no matter which programmming language) works on Hyper Ninja,
 <b> as long as it has a Get Request with the below JSON OBJECT as Response with Endpoint matches
 the registered endpoint in hyper ninja account.</b>
 
-### 1.Server Setup (NodeJs Express example)
+### 1.Registered Server Setup (NodeJs Express example)
 
 Each registered server, must have simple <b>endpoint setup</b>.
 With it's help Hyper Ninja can keep the server Active,
@@ -168,30 +168,28 @@ this endpoint is going to handle a <b>GET</b> Request and return this object as 
 }
 ```
 
-### 2.Installation
+ <font size=5>*  There is two server setup Methods Simple & Advanced Server Setups:</font>
 
-There is two server setup Methods Simple & Advanced.
+#### -) `Simple Server Setup`
 
-#### Simple Installation
+I. Open the Entry point file (server.js / index.js) of the server-side code ,
 
-I.open the Entry point file (server.js / index.js) of the server-side code ,
-
-II.COPY and PASTE this in your entry point file:
+II. COPY and PASTE this in your entry point file:
 
 ```js
-app.get("/reviver", (req, res) =>
+app.get("/reviver", (_, res) =>
   res.status(200).json({ success: true, data: "revived" })
 );
 ```
 
-#### Advanced Installation
+#### -) ` Advanced Server Setup`
 
 I.open the Entry point file (server.js / index.js) of the server-side code ,
 
 II.COPY and PASTE this in your entry point file:
 
 ```js
-app.get("/reviver", (req, res) =>
+app.get("/reviver", (_, res) =>
   setTimeout(
     () => res.status(200).json({ success: true, data: "revived" }),
     5000
@@ -203,12 +201,18 @@ app.get("*", (_, res) =>
 );
 ```
 
-- The <b>SetTimeout</b> provides a better user experience and also gurantees that the server is Activated and functioned for a fixed amount of time , which increase the Hyper Ninja server's Revivng-Mechanism efficiency.
-- The <b>`"*"` GLOBAL ENDPOINT</b> gives Error handling advantage , where the Hyper Ninja server’s Logger
+- The <b>SetTimeout</b>, provides a better user experience and also gurantees that the server is Activated and functioned for a fixed amount of time , which increase the Hyper Ninja server's Revivng-Mechanism efficiency.
+- The <b>`"*"` GLOBAL ENDPOINT</b>, gives Error handling advantage , where the Hyper Ninja server’s Logger
 will warn you if the Error is caused by incorrect endpoint.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ROADMAP -->
+### In Hyper Ninja App
+<font size=4>A. First Register or Login To Your Account By clicking The Image Below</font>
+<img src="[register-page-img]">
+[![register-page-img][register-page-img]](https://hyper-ninja.onrender.com/register)
+
+B.
+
 
 ## Technologies Used
 
@@ -308,3 +312,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
+
+[register-page-img]:/readme_assets/register_page.png
