@@ -77,7 +77,7 @@
 
 ## About The Project
 
-<img src="readme_assets/register_page.png"  alt="Logo" >
+<img src="readme_assets/dashboard-img.png"  alt="Logo" >
 
 <br>
 <br>
