@@ -1,4 +1,4 @@
-<a id="readme-top"></a>
+<a name="readme-top"></a>
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -59,6 +59,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+<img src="readme_assets/dashboard.png" alt="Logo" >
 
 Hyper Ninja is professionally engineered Full-stack MERN app ,  that ensures your servers  deployed on Render or any other deployment  service stay awake and running effortlessly.
 
