@@ -1,4 +1,4 @@
-<a name="readme-top"></a>
+<a id="readme-top"></a>
 
 <!-- PROJECT LOGO -->
 <br />
@@ -115,37 +115,6 @@ Third party deployment servers put each deployed server to sleep (idle state),af
     </font>
   <br>
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
 ## Usage
 
 Usage is very Simple but First small setup for each server is required.
@@ -168,7 +137,7 @@ this endpoint is going to handle a <b>GET</b> Request and return this object as 
 }
 ```
 
- <font size=5>*  There is two server setup Methods Simple & Advanced Server Setups:</font>
+<font size=5>\* There is two server setup Methods Simple & Advanced Server Setups:</font>
 
 #### -) `Simple Server Setup`
 
@@ -207,12 +176,28 @@ will warn you if the Error is caused by incorrect endpoint.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### In Hyper Ninja App
-<font size=4>A. First Register or Login To Your Account By clicking The Image Below</font>
 
-<a href="https://hyper-ninja.onrender.com/register" target="_blank">![register-page-img][register-page-img]</a>
+<font size=4>
+A. First Register or Login To Your Account By clicking The Image Below
 
-B.
+[![Registeration Page][register-page-img]](https://hyper-ninja.onrender.com/register)
 
+<br>
+
+B.Finally After successful Registeration/Login, you will be Redirected to Your Dashboard Page.
+
+- Simply Click NEW on the uppper right side of the dashboard
+- then provide your server’s Name and Url
+- Then after the server is successfully registered it will appear in the dashboard ,
+- Clicking on the server’s Dashboard Row , redirects to the Server’s Profile Page,
+  where all the Server’s settings and Error Logger are.
+
+  <b> `Remember to keep Hyper Ninja open in The Browser and Logged-in for the server
+ to stay Up & Running.`</b>
+
+</font>
+
+![Dashboard][dashboard-img]
 
 ## Technologies Used
 
@@ -223,7 +208,17 @@ B.
 5.React-router-dom with createBrowserRouter()
 
 ### Backend
-
+1.Node js Express (Typescript)
+2.Mongo DB
+3.Mongoose for Object-modeling
+4.User Auth System:
+	I.JSON-WebToken (JWT)
+	II. Cookies With httpOnly and Server side only access
+	III.Password Hashing with bcrypt pkg
+5.cors() with credentials and strict origin 
+6.ENV Configured
+7.ExpressJS AsyncHandler
+8.Error Handler 
 <!-- CONTRIBUTING -->
 
 ## Project Structure
@@ -312,5 +307,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
-
-[register-page-img]:/readme_assets/register_page.png
+[register-page-img]: /readme_assets/register_page.png
+[dashboard-img]: /readme_assets/dashboard.png
