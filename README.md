@@ -59,7 +59,7 @@
     <li>
       <a href="#technologies-used">Technologies Used</a>
       <ul>
-        <li><a href="#frontend">Frontend</a></li>
+        <li><a href="#frontend-">Frontend</a></li>
         <li><a href="#backend-%EF%B8%8F">Backend</a></li>
       </ul>
     </li>
