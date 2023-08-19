@@ -44,7 +44,6 @@
 
 </div>
 
-<!-- TABLE OF CONTENTS -->
 <font size=4>
 <details>
 
@@ -60,8 +59,8 @@
     <li>
       <a href="#technologies-used">Technologies Used</a>
       <ul>
-        <li><a href="#frontend">Frontend</a></li>
-        <li><a href="#backend">Backend</a></li>
+        <li><a href="#frontend-🌐">Frontend</a></li>
+        <li><a href="#backend-🖥️">Backend</a></li>
       </ul>
     </li>
      <li>
@@ -233,7 +232,7 @@ will warn you if the Error is caused by incorrect endpoint.
 
 Building upon a foundation of 100% TypeScript, both the frontend and backend of our application showcase a cohesive and dynamic technology stack.
 
-### Frontend
+### Frontend 🌐
 
 1. React Vite (Typescript)
 2. Redux ToolKit as state manager
@@ -241,16 +240,16 @@ Building upon a foundation of 100% TypeScript, both the frontend and backend of 
 4. 100% Pure CSS
 5. React-router-dom with `createBrowserRouter()`
 
-### Backend
+### Backend 🖥️
 
 1. Node js Express (Typescript)
-2. Mongo DB
-3. Mongoose for Object-modeling
+2. Leveraging MongoDB for data storage
+3. Mongoose for efficient object modeling
 4. User Auth System:
 
-   I.JSON-WebToken (JWT)
+   I. JSON Web Token (JWT) for secure authentication
 
-   II. Cookies With httpOnly and Server side only access
+   II. Cookies with HTTP-only and server-side access for enhanced security
 
    III.Password Hashing with bcrypt Package
 
@@ -258,6 +257,8 @@ Building upon a foundation of 100% TypeScript, both the frontend and backend of 
 6. ENV Configured
 7. ExpressJS AsyncHandler
 8. Error Handler
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Project Structure
 
