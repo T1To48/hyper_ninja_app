@@ -47,7 +47,7 @@
 </div>
 
 <font size=4>
-<details>
+<details open>
 
   <summary>Table of Contents</summary>
   <ol>
