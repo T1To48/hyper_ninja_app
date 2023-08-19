@@ -12,19 +12,19 @@
   <p align="center">
     Anti Server-Sleeper,  Keeps your Servers Up and Running 
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>View Demo</strong></a>
     <br />
-    <br />
+    <font size=3>
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/T1To48/hyper_ninja_app/issues">Report Bug</a>
+</font>
   </p>
 
 ![TypeScript][TypeScript-header]
 
 <br>
+
+### `Frontend`
 
 ![HTML5][HTML5]
 ![CSS][CSS]
@@ -32,6 +32,8 @@
 ![Vite][Vite]
 ![react-router-dom][react-router-dom]
 ![Redux][Redux]
+
+### `Backend`
 
 ![NodeJS][NodeJS]
 ![ExpressJS][ExpressJS]
@@ -379,6 +381,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [dashboard-img]: /readme_assets/dashboard.gif
 [TypeScript-header]: https://img.shields.io/badge/built%20with%20typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
 [TypeScript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+
 [React]: https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
 [Vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
 [Redux]: https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white
