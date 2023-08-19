@@ -305,7 +305,8 @@ hyper_ninja_app/--------------------🟢 The Github Repository
 │  │  │  |
 │  │  ├─📂 user/--------------------🟢 Self Contained Component for registered Handling Users
 │  │  │  |
-│  │     ├─🗄 users-----------------🟢 (📄controllers, 📄model, 📄middlewares, 📄routes and 📄services files)
+│  │     ├─🗄 users-----------------🟢 (📄controllers, 📄model, 📄middlewares, 📄routes
+│  │                                                                       and 📄services files)
 │  │
 │  ├─📂 config/---------------------🟢 Configuration files
 │  │  │
