@@ -57,8 +57,8 @@
     </li>
     <li><a href="#usage">Usage</a>
     <ul>
-    <li><a href="#1%EF%B8%8F⃣setup-registered-server-nodejs-express-example">Registered Server Setup</a></li>
-    <li><a href="#2%EF%B8%8F⃣-setup-hyper-ninja-app">Hyper Ninja in App Setup</a></li>
+    <li><a href="#1%EF%B8%8F⃣setup-registered-server-nodejs-express-example">1. Registered Server Setup</a></li>
+    <li><a href="#2%EF%B8%8F⃣-setup-hyper-ninja-app">2. Hyper Ninja in App Setup</a></li>
     </ul>
     </li>
     <li>
@@ -270,18 +270,39 @@ Built upon a foundation of 100% TypeScript 🔵, both the frontend and backend o
 
 ### Client Side
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+```
+hyper_ninja_app/
+├─📂 client/
+│  ├─📂 public/
+│  │  ├─📄 LOGO_Images       
+│  ├─📂 src/
+│  │  ├─📂 app /
+│  │  ├─📂 components/
+│  │  ├─📂 features/
+│  │  ├─📂 hooks/
+│  │  ├─📂 layouts/
+│  │  ├─📂 pages/
+│  │  ├─📂 styles/
+│  │  ├─📂 types/
+│  │  ├─📂 App.tsx
+│  │  ├─📂 Main.tsx
+├─📂 src /
+│  ├─📂 api/
+│  │  ├─📂 url/
+│  │  │  ├─📄 registered servers (controllers, model, routes and services files)
+│  │  ├─📂 user/
+│  │  │  ├─📄 users (controllers, model, middlewares, routes and services files)
+│  ├─📂 config/
+│  │  ├─📄 db.ts
+│  │  ├─📄 config.env
+│  ├─📂 middlewares/
+│  │  ├─📄 errorHandler.ts
+│  │  ├─📄 authMiddleWare.ts
+│  ├─📂 utils/
+│  │  ├─📄 constants.ts
+│  ├─📄 routes.ts
+│  ├─📄 server.ts
+```
 
 ### Server Side
 
