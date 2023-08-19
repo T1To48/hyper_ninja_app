@@ -146,7 +146,7 @@ But every server (no matter which programmming language) works on Hyper Ninja,
 <b> as long as it has a Get Request with the below JSON OBJECT as Response with Endpoint matches
 the registered endpoint in hyper ninja account.</b>
 
-### 1.SETUP Registered Server (NodeJs Express example)
+### 1️⃣.SETUP Registered Server (NodeJs Express example)
 
 Each registered server, must have simple <b>endpoint setup</b>.
 With it's help Hyper Ninja can keep the server Active,
@@ -197,7 +197,7 @@ app.get("*", (_, res) =>
 will warn you if the Error is caused by incorrect endpoint.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### 2. SETUP Hyper Ninja App
+### 2️⃣. SETUP Hyper Ninja App
 
 <font size=4>
 <ul>
@@ -230,34 +230,34 @@ will warn you if the Error is caused by incorrect endpoint.
 
 ## Technologies Used
 
-Building upon a foundation of 100% TypeScript, both the frontend and backend of our application showcase a cohesive and dynamic technology stack.
+Built upon a foundation of 100% TypeScript 🔵, both the frontend and backend of our application showcase a cohesive and dynamic technology stack.
 
 
 ### Frontend 🌐
 
-1. React Vite (Typescript)
-2. Redux ToolKit as state manager
-3. Redux ToolKit Query as data fetching and caching tool
-4. 100% Pure CSS
-5. React-router-dom with `createBrowserRouter()`
+1. React Vite (Typescript) ⚛️🚀
+2. Redux ToolKit as state manager 👔
+3. Redux ToolKit Query as data fetching and caching tool 🔗
+4. 100% Pure CSS 🎨
+5. React-router-dom with `createBrowserRouter()` 🧭
 
 ### Backend 🖥️
 
-1. Node js Express (Typescript)
-2. Leveraging MongoDB for data storage
-3. Mongoose for efficient object modeling
-4. User Auth System:
+1. NodeJS ExpressJS (Typescript) 🟢🚀
+2. Leveraging MongoDB for data storage 🗄️ 
+3. Mongoose for efficient object modeling 🏢🔍 
+4. User Auth System 🔐:
 
-   I. JSON Web Token (JWT) for secure authentication
+   I. JSON Web Token (JWT) for secure authentication 🎫🔒
 
-   II. Cookies with HTTP-only and server-side access for enhanced security
+   II. Cookies with HTTP-only and server-side access for enhanced security 🍪
 
-   III.Password Hashing with bcrypt Package
+   III. Password Hashing with bcrypt Package 🔑
 
-5. cors() with credentials and strict origin
-6. ENV Configured
-7. ExpressJS AsyncHandler
-8. Error Handler
+5. cors() with credentials and strict origin 🔄
+6. ENV Configured ⚙️
+7. ExpressJS AsyncHandler 🔧
+8. Error Handler ⚠️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
