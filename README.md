@@ -45,7 +45,9 @@
 </div>
 
 <!-- TABLE OF CONTENTS -->
+<font size=4>
 <details>
+
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -71,9 +73,12 @@
     </li>
     <li><a href="#used-tech-review">Used Tech Review</a></li>
     <li><a href="#personal-experience">Personal Experience</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
    
   </ol>
+  
 </details>
+</font>
 
 ## About The Project
 
@@ -94,9 +99,9 @@ Third party deployment servers put each deployed server to sleep (idle state),af
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Features
+### Features
 
-<font  size=5  style="color:#D4AF37">Empowering users with an array of advanced functionalities. Explore dynamic dashboards, personalized profile management, and more. Discover how these features redefine user interaction:
+<font  size=4  style="color:#D4AF37">Empowering users with an array of advanced functionalities. Explore dynamic dashboards, personalized profile management, and more. Discover how these features redefine user interaction:
 </font>
 
 - <font  size=4>
@@ -155,7 +160,7 @@ this endpoint is going to handle a <b>GET</b> Request and return this object as 
 }
 ```
 
-<font size=5>\* There is two server setup Methods Simple & Advanced Server Setups:</font>
+<font size=5>\* There is Two Different Server setup Methods (Simple & Advanced), to choose from:</font>
 
 #### -) `Simple Server Setup`
 
@@ -226,15 +231,15 @@ will warn you if the Error is caused by incorrect endpoint.
 
 ## Technologies Used
 
-Frontend & Backend are built With 100% Typescript.
+Building upon a foundation of 100% TypeScript, both the frontend and backend of our application showcase a cohesive and dynamic technology stack.
 
 ### Frontend
 
 1. React Vite (Typescript)
 2. Redux ToolKit as state manager
-3. Redux ToolKit Query as data fetching and chaching tool
+3. Redux ToolKit Query as data fetching and caching tool
 4. 100% Pure CSS
-5. React-router-dom with createBrowserRouter()
+5. React-router-dom with `createBrowserRouter()`
 
 ### Backend
 
@@ -247,13 +252,12 @@ Frontend & Backend are built With 100% Typescript.
 
    II. Cookies With httpOnly and Server side only access
 
-   III.Password Hashing with bcrypt pkg
-   
+   III.Password Hashing with bcrypt Package
+
 5. cors() with credentials and strict origin
 6. ENV Configured
 7. ExpressJS AsyncHandler
 8. Error Handler
-<!-- CONTRIBUTING -->
 
 ## Project Structure
 
