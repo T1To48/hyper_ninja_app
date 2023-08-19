@@ -22,7 +22,7 @@
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
 
-![TypeScript][TypeScript]
+![TypeScript][TypeScript-header]
 
 <br>
 
@@ -70,10 +70,6 @@
     </li>
      <li>
       <a href="#project-structure">Project Structure</a>
-      <ul>
-        <li><a href="#client-side">Client Side</a></li>
-        <li><a href="#server-side">Server Side</a></li>
-      </ul>
     </li>
     <li><a href="#used-tech-review">Used Tech Review</a></li>
     <li><a href="#personal-experience">Personal Experience</a></li>
@@ -95,7 +91,7 @@ Hyper Ninja is professionally engineered Full-stack MERN app , that ensures your
 
 Third party deployment servers put each deployed server to sleep (idle state),after 14 minutes of non-usage. This can lead to 30-40 seconds loading time, when the server is in idle state.
 
-<b >In comparison each server that is subscribed in hyper ninja will be up and running with less than 0.5 second loading time.</b>
+<b >In comparison each server that is registered in hyper ninja will be up and running with less than 0.5 second loading time.</b>
 
 <span style="color:#695cfe; font-weight:500">\* Registered Servers Stay Active, As long as the user is logged in to his account and Hyper Ninja app is opened in a browser tab.</span>
 
@@ -216,17 +212,17 @@ will warn you if the Error is caused by incorrect endpoint.
 
 <li>B) Finally After successful Registeration/Login, you will be Redirected to Your Dashboard Page.
 
-
 => Simply Click NEW on the uppper right side of the dashboard
 => then provide your server’s Name and Url
 
 => Then after the server is successfully registered it will appear in the dashboard ,
 
 => Clicking on the server’s Dashboard Row , redirects to the Server’s Profile Page,
-  where all the Server’s settings and Error Logger are.
+where all the Server’s settings and Error Logger are.
 
-  <b> `Remember to keep Hyper Ninja open in The Browser and Logged-in for the server
+<b> `Remember to keep Hyper Ninja open in The Browser and Logged-in for the server
  to stay Up & Running.`</b>
+
    </li>
   </ul>
   </font>
@@ -235,8 +231,7 @@ will warn you if the Error is caused by incorrect endpoint.
 
 ## Technologies Used
 
-Built upon a foundation of 100% TypeScript 🔵, both the frontend and backend of our application showcase a cohesive and dynamic technology stack.
-
+Built upon a foundation of 100% TypeScript 🔵, both the frontend and backend of The Application showcase a cohesive and dynamic technology stack.
 
 ### Frontend 🌐
 
@@ -249,8 +244,8 @@ Built upon a foundation of 100% TypeScript 🔵, both the frontend and backend o
 ### Backend 🖥️
 
 1. NodeJS ExpressJS (Typescript) 🟢🚀
-2. Leveraging MongoDB for data storage 🗄️ 
-3. Mongoose for efficient object modeling 🏢🔍 
+2. Leveraging MongoDB for data storage 🗄️
+3. Mongoose for efficient object modeling 🏢🔍
 4. User Auth System 🔐:
 
    I. JSON Web Token (JWT) for secure authentication 🎫🔒
@@ -268,53 +263,81 @@ Built upon a foundation of 100% TypeScript 🔵, both the frontend and backend o
 
 ## Project Structure
 
-### Client Side
-
 ```
-hyper_ninja_app/
-├─📂 client/
-│  ├─📂 public/
-│  │  ├─📄 LOGO_Images       
-│  ├─📂 src/
-│  │  ├─📂 app /
-│  │  ├─📂 components/
-│  │  ├─📂 features/
-│  │  ├─📂 hooks/
-│  │  ├─📂 layouts/
-│  │  ├─📂 pages/
-│  │  ├─📂 styles/
-│  │  ├─📂 types/
-│  │  ├─📂 App.tsx
-│  │  ├─📂 Main.tsx
-├─📂 src /
+hyper_ninja_app/--------------------🟢 The Github Repository
+│
+├─📂 client/------------------------🟢 Contains the Client-side React Code
+│  │
+│  ├─📂 public/---------------------🟢 Contains the Logo Svg files
+│  │  │
+│  │  ├─📄 LOGO_Images
+│  ├─📂 src/------------------------🟢 Contains the Logo Svg files
+│  │  │
+│  │  ├─📂 app /--------------------🟢 Redux  Tool Kit Store & Hooks
+│  │  │
+│  │  ├─📂 components/--------------🟢 React Components Used across the App
+│  │  │
+│  │  ├─📂 features/----------------🟢Redux  Tool Kit Slices
+│  │  │
+│  │  ├─📂 hooks/-------------------🟢Custom Build React Hooks
+│  │  │
+│  │  ├─📂 layouts/-----------------🟢User-area Sidebar Layout
+│  │  │
+│  │  ├─📂 pages/-------------------🟢Main Page Components
+│  │  │
+│  │  ├─📂 styles/------------------🟢  Styles used all across the app
+│  │  │
+│  │  ├─📂 types/-------------------🟢 Type script types and Interfaces
+│  │  │
+│  │  ├─📄 App.tsx------------------🟢 The main app component
+│  │  │
+│  │  ├─📄 Main.tsx-----------------🟢Entry point for the React App
+│
+├─📂 src /--------------------------🟢constains the server side Node Code
+│  │
 │  ├─📂 api/
-│  │  ├─📂 url/
-│  │  │  ├─📄 registered servers (controllers, model, routes and services files)
-│  │  ├─📂 user/
-│  │  │  ├─📄 users (controllers, model, middlewares, routes and services files)
-│  ├─📂 config/
-│  │  ├─📄 db.ts
-│  │  ├─📄 config.env
+│  │  │
+│  │  ├─📂 url/---------------------🟢 Self Contained Component for Handling registered Servers
+│  │  │  |
+│  │  │  ├─🗄 registered servers----🟢 (📄controllers, 📄model, 📄routes and 📄services files)
+│  │  │  |
+│  │  ├─📂 user/--------------------🟢 Self Contained Component for registered Handling Users
+│  │  │  |
+│  │     ├─🗄 users-----------------🟢 (📄controllers, 📄model, 📄middlewares, 📄routes and 📄services files)
+│  │
+│  ├─📂 config/---------------------🟢 Configuration files
+│  │  │
+│  │  ├─📄 db.ts--------------------🟢 Conmtains Mongo Db connecting function
+│  │  │
+│  │  ├─📄 config.env---------------🟢 Contains All ENV Secrets (is refrenced in .gitignore)
+│  │
 │  ├─📂 middlewares/
-│  │  ├─📄 errorHandler.ts
-│  │  ├─📄 authMiddleWare.ts
+│  │  ├─📄 errorHandler.ts----------🟢global errorHandler
+│  │  │
+│  │  ├─📄 authMiddleWare.ts--------🟢User Authentication Middleware
+│  │
 │  ├─📂 utils/
-│  │  ├─📄 constants.ts
-│  ├─📄 routes.ts
-│  ├─📄 server.ts
+│  │  │
+│  │  ├─📄 constants.ts------------ 🟢ENV constants
+│  │
+│  ├─📄 routes.ts-------------------🟢The Main Api  Router
+│  │
+│  ├─📄 server.ts-------------------🟢Entry Point for the Server
 ```
-
-### Server Side
-
-<!-- LICENSE -->
 
 ## Used Tech Review
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+#### ![][CSS]
 
+- well as a practical person , who goes by logic and "action & reaction" principle , css was a big challenge for me actually styling and designing in general are not my thing , but i decided to prove to myself that i am capable of doing it , because at the end working with css can sometimes be frustrating , but its not hard .
+#### ![ReduxToolKit][ReduxToolKit]
+- Using Redux ToolKit as both state manager also as (chaching & fetching) tool was a really good decision, it helped a lot, when  exactly to call each http request, with automatic refetching and recaching Tags.
+Also its ability to provide ready to use current request status(loading, error, success...) makes building and maintaining a  user friendly  app with rich ui and ux much easier .
+#### ![Typescript][Typescript]
+- Learning Typescript wasnt easy , either hard  i  would rather describe it as challenging and needs dedication . 
+But after learning it, i think it is a "must" for each junior Web Dev, 
+Typescript is very powerful and helped me a lot maintaing my project and make it very scalable.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTACT -->
 
 ## Personal Experience
 
@@ -323,8 +346,6 @@ Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.c
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
 
@@ -343,10 +364,12 @@ Use this space to list resources you find helpful and would like to give credit 
 
 [register-page-img]: /readme_assets/register_page.gif
 [dashboard-img]: /readme_assets/dashboard.gif
-[TypeScript]: https://img.shields.io/badge/built%20with%20typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-header]: https://img.shields.io/badge/built%20with%20typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
 [React]: https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
 [Vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
 [Redux]: https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white
+[ReduxToolKit]: https://img.shields.io/badge/redux%20ToolKit-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white
 [HTML5]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
 [CSS]: https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white
 [react-router-dom]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
