@@ -19,10 +19,10 @@
     <a href="https://github.com/T1To48/hyper_ninja_app/issues">Report Bug</a>
 </font>
   </p>
+<br>
 
 ![TypeScript][TypeScript-header]
 
-<br>
 
 ### `Frontend`
 
