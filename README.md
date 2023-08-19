@@ -59,8 +59,8 @@
     <li>
       <a href="#technologies-used">Technologies Used</a>
       <ul>
-        <li><a href="#frontend-🌐">Frontend</a></li>
-        <li><a href="#backend-🖥️">Backend</a></li>
+        <li><a href="#frontend">Frontend</a></li>
+        <li><a href="#backend-%EF%B8%8F">Backend</a></li>
       </ul>
     </li>
      <li>
@@ -232,7 +232,8 @@ will warn you if the Error is caused by incorrect endpoint.
 
 Building upon a foundation of 100% TypeScript, both the frontend and backend of our application showcase a cohesive and dynamic technology stack.
 
-### Frontend 🌐
+
+### Frontend   
 
 1. React Vite (Typescript)
 2. Redux ToolKit as state manager
