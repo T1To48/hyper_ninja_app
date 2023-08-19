@@ -71,9 +71,9 @@
      <li>
       <a href="#project-structure">Project Structure</a>
     </li>
-    <li><a href="#used-tech-review">Used Tech Review</a></li>
+    <li><a href="#main-technical-challenges">Main Technical Challenges</a></li>
     <li><a href="#personal-experience">Personal Experience</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <!-- <li><a href="#acknowledgments">Acknowledgments</a></li> -->
    
   </ol>
   
@@ -325,29 +325,42 @@ hyper_ninja_app/--------------------🟢 The Github Repository
 │  ├─📄 server.ts-------------------🟢Entry Point for the Server
 ```
 
-## Used Tech Review
-
+## Main Technical Challenges
 #### ![][CSS]
 
 - well as a practical person , who goes by logic and "action & reaction" principle , css was a big challenge for me actually styling and designing in general are not my thing , but i decided to prove to myself that i am capable of doing it , because at the end working with css can sometimes be frustrating , but its not hard .
 #### ![ReduxToolKit][ReduxToolKit]
-- Using Redux ToolKit as both state manager also as (chaching & fetching) tool was a really good decision, it helped a lot, when  exactly to call each http request, with automatic refetching and recaching Tags.
+- Using Redux ToolKit as both state manager also as (caching & fetching) tool was a really good decision, it helped a lot, when  exactly to call each http request, with automatic refetching and recaching Tags.
 Also its ability to provide ready to use current request status(loading, error, success...) makes building and maintaining a  user friendly  app with rich ui and ux much easier .
 #### ![Typescript][Typescript]
-- Learning Typescript wasnt easy , either hard  i  would rather describe it as challenging and needs dedication . 
+- Learning Typescript wasn't easy , either hard  i  would rather describe it as challenging and needs dedication. 
 But after learning it, i think it is a "must" for each junior Web Dev, 
 Typescript is very powerful and helped me a lot maintaing my project and make it very scalable.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Personal Experience
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+The Hardest challenge i had while  building a Completly out of the box project is the infrstructure of the project and how to engineer it to have a full closed secure cycle with 100% scalability and functionality. 
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+For Example :
+* When to call each Server , 
+* how should the response be like ,
+* how to handle the server if it is in idle state or active state ,
+* how to behave with the cached data if a user performs any action like changing url data logging in or out , 
+* Client and Server Side  Routing systems
+* what about many error varaities , how to show the user his errors ,
+ * how to authorize the userarea , how to add delete cookies .
+* How to  properly handle  chaching after each CRUD operation
+* how to securly handle , changing the user Password or delete user account 
+and many more .
+
+In Conclusion  the Questions of When and how to do the Operations or the Manipulations 
+did take more of my time building this project rather than, 
+code writing ,runtime errors or learning & coding with typescript.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Acknowledgments
+<!-- ## Acknowledgments
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
@@ -360,7 +373,7 @@ Use this space to list resources you find helpful and would like to give credit 
 - [Font Awesome](https://fontawesome.com)
 - [React Icons](https://react-icons.github.io/react-icons/search)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 [register-page-img]: /readme_assets/register_page.gif
 [dashboard-img]: /readme_assets/dashboard.gif
