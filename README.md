@@ -24,7 +24,7 @@
 ![TypeScript][TypeScript-header]
 
 
-### `FrontendTEST`
+### `Frontend`
 
 ![HTML5][HTML5]
 ![CSS][CSS]
