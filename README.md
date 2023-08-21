@@ -57,7 +57,7 @@
         <li><a href="#features">Features</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a>
+    <li><a href="#usage-setup">Usage</a>
     <ul>
     <li><a href="#1%EF%B8%8F⃣setup-registered-server-nodejs-express-example">1. Registered Server Setup</a></li>
     <li><a href="#2%EF%B8%8F⃣-setup-hyper-ninja-app">2. Hyper Ninja in App Setup</a></li>
