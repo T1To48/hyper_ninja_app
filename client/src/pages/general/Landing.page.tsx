@@ -24,7 +24,7 @@ const LandingPage = () => {
           <a href="#body">
             <button>Learn More</button>
           </a>
-          <button>Demo</button>
+          <a href="https://www.youtube.com/watch?v=CO38MX2k4ss" target="_blank"><button>Demo</button></a> 
           <button onClick={() => navigate("/register")}>Register</button>
         </div>
       </header>
