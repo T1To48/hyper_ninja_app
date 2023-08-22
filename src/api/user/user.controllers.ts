@@ -161,6 +161,7 @@ export const deleteUser = asyncHandler(
     res.status(200).cookie("token", "deleted", {
       httpOnly: true,
       secure: true,
+      sameSite:"none" ,
       expires: new Date(234),
     }).json({
       success: true,
