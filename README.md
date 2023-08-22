@@ -14,7 +14,7 @@
     <br />
     <br />
     <font size=3>
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://youtu.be/CO38MX2k4ss">View Demo</a>
     ·
     <a href="https://github.com/T1To48/hyper_ninja_app/issues">Report Bug</a>
 </font>
@@ -142,6 +142,8 @@ Third party deployment servers put each deployed server to sleep (idle state),af
 
 ## Usage (SETUP)
 
+<a href="https://youtu.be/CO38MX2k4ss">Click HERE for Usage Video</a>
+
 Usage is very Simple but First small setup for each server is required.
 
 This Usage Guide is for NodeJs Express server,
@@ -231,6 +233,8 @@ where all the Server’s settings and Error Logger are.
 
 ![Dashboard][dashboard-img]
 
+
+### Need More Help Using the App, see <a href="https://youtu.be/CO38MX2k4ss">video tutorial</a>
 ## Technologies Used
 
 Built upon a foundation of 100% TypeScript 🔵, both the frontend and backend of The Application showcase a cohesive and dynamic technology stack.
