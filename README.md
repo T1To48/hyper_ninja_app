@@ -298,9 +298,6 @@ hyper_ninja_app/--------------------🟢 The Github Repository
 │  │  │
 │  │  ├─📄 Main.tsx-----------------🟢Entry point for the React App
 │
-│
-│
-│
 ├─📂 src /--------------------------🟢constains the server side Node Code
 │  │
 │  ├─📂 api/
