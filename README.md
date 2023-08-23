@@ -298,6 +298,9 @@ hyper_ninja_app/--------------------🟢 The Github Repository
 │  │  │
 │  │  ├─📄 Main.tsx-----------------🟢Entry point for the React App
 │
+│
+│
+│
 ├─📂 src /--------------------------🟢constains the server side Node Code
 │  │
 │  ├─📂 api/
@@ -329,6 +332,7 @@ hyper_ninja_app/--------------------🟢 The Github Repository
 │  ├─📄 routes.ts-------------------🟢The Main Api  Router
 │  │
 │  ├─📄 server.ts-------------------🟢Entry Point for the Server
+
 ```
 
 ## Main Technical Challenges
