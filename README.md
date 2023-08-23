@@ -232,9 +232,8 @@ where all the Server’s settings and Error Logger are.
   </font>
 
 ![Dashboard][dashboard-img]
+###  Check The <a href="https://youtu.be/CO38MX2k4ss">Usage-Guide Video Tutorial </a>for a step-by-step walkthrough, and set up your registered server with ease. 
 
-
-### Need More Help Using the App, see <a href="https://youtu.be/CO38MX2k4ss">video tutorial</a>
 ## Technologies Used
 
 Built upon a foundation of 100% TypeScript 🔵, both the frontend and backend of The Application showcase a cohesive and dynamic technology stack.
