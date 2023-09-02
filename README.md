@@ -6,7 +6,9 @@
 
 `Temporarily Only compatible with`
 <br/>
+<a href="#" style="text-decoration:none; color:white" >
      <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/512px-Google_Chrome_icon_%28February_2022%29.svg.png" width="50px" >Google Chrome</img>
+     </a>
 </div>
 
 
