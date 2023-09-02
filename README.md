@@ -6,9 +6,8 @@
 
 `Temporarily Only compatible with`
 <br/>
-<a htef="">
      <img  src="./readme_assets/google-chrome-icon.png" width="50px" ></img>
-     </a><b>Google Chrome</b>
+     <b>Google Chrome</b>
 </div>
 
 
