@@ -1,7 +1,17 @@
 <a id="readme-top"></a>
 
-<!-- PROJECT LOGO -->
-<br />
+<br/>
+
+<div >
+
+`Temporarily Only compatible with`
+<br/>
+     <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/512px-Google_Chrome_icon_%28February_2022%29.svg.png" width="50px" >Google Chrome</img>
+</div>
+
+
+
+
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="client/public/logo/Logo.svg" alt="Logo" width="80" height="80">
@@ -20,6 +30,7 @@
 </font>
   </p>
 <br>
+
 
 ![TypeScript][TypeScript-header]
 
@@ -45,6 +56,7 @@
 ![Bcrypt-password-hashing][bcrypt]
 
 </div>
+
 
 <font size=4>
 <details open>
@@ -402,3 +414,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [Cookies]: https://img.shields.io/badge/Cookies-D4AA00.svg?style=for-the-badge&logo=Cookiecutter&logoColor=white
 [bcrypt]: https://img.shields.io/badge/Bcrypt%20Password%20Hashing-003B57.svg?style=for-the-badge&logo=Spring-Security&logoColor=white
 [ENV]: https://img.shields.io/badge/.ENV-ECD53F.svg?style=for-the-badge&logo=dotenv&logoColor=black
+[Google Chrome]:https://img.shields.io/badge/Google%20Chrome-4285F4.svg?style=for-the-badge&logo=Google-Chrome&logoColor=white
