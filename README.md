@@ -13,7 +13,7 @@
 
 
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://hyper-ninja.onrender.com">
     <img src="client/public/logo/Logo.svg" alt="Logo" width="80" height="80">
   </a>
 
