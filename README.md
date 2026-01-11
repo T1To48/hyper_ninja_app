@@ -2,13 +2,7 @@
 
 <br/>
 
-<div >
 
-`Temporarily Only compatible with`
-<br/>
-     <img  src="./readme_assets/google-chrome-icon.png" width="50px" ></img>
-     <b>Google Chrome</b>
-</div>
 
 
 
